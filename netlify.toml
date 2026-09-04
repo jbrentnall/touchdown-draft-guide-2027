@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Phase B adds a scheduled function here (nightly sheet sync trigger) and
+# the on-demand /api/publish-now route uses BUILD_HOOK_URL from env.

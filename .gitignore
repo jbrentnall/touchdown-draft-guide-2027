@@ -1,0 +1,27 @@
+# dependencies
+/node_modules
+
+# next.js build output
+/.next/
+/out/
+tsconfig.tsbuildinfo
+
+# generated data (rebuilt from source on every build, never hand-edited)
+/data/generated/*.json
+
+# env files (secrets — never commit)
+.env
+.env*.local
+
+# service account key, if ever downloaded into the project by mistake
+*service-account*.json
+google-credentials*.json
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+.vercel
+
+# original zip / working assets, kept locally not in repo history
+2027 NFL Draft Guide portal.zip
