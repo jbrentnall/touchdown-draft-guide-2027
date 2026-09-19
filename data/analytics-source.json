@@ -12343,5 +12343,2360 @@
       "Man YPRR": 84,
       "Zone YPRR": 20
     }
+  },
+  {
+    "position": "TE",
+    "name": "Dae'Quan Wright",
+    "school": "OLE MISS",
+    "percentiles": {
+      "YPRR": 89,
+      "Threat Rate": 62,
+      "1D/Route": 87,
+      "YAC/Rec": 98,
+      "ADOT": 46,
+      "Contested Catch": 0,
+      "Man YPRR": 79,
+      "Zone YPRR": 85
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Eli Stowers",
+    "school": "VANDERBILT",
+    "percentiles": {
+      "YPRR": 96,
+      "Threat Rate": 97,
+      "1D/Route": 98,
+      "YAC/Rec": 65,
+      "ADOT": 53,
+      "Contested Catch": 42,
+      "Man YPRR": 82,
+      "Zone YPRR": 98
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Terrance Carter Jr.",
+    "school": "TEXAS TECH",
+    "percentiles": {
+      "YPRR": 89,
+      "Threat Rate": 90,
+      "1D/Route": 86,
+      "YAC/Rec": 77,
+      "ADOT": 16,
+      "Contested Catch": 65,
+      "Man YPRR": 88,
+      "Zone YPRR": 79
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Dorian Thomas",
+    "school": "NEW MEXICO",
+    "percentiles": {
+      "YPRR": 79,
+      "Threat Rate": 89,
+      "1D/Route": 71,
+      "YAC/Rec": 70,
+      "ADOT": 18,
+      "Contested Catch": 20,
+      "Man YPRR": 70,
+      "Zone YPRR": 70
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Carsen Ryan",
+    "school": "BYU",
+    "percentiles": {
+      "YPRR": 90,
+      "Threat Rate": 72,
+      "1D/Route": 84,
+      "YAC/Rec": 86,
+      "ADOT": 25,
+      "Contested Catch": 15,
+      "Man YPRR": 74,
+      "Zone YPRR": 94
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Dylan Wade",
+    "school": "UCF",
+    "percentiles": {
+      "YPRR": 91,
+      "Threat Rate": 90,
+      "1D/Route": 85,
+      "YAC/Rec": 86,
+      "ADOT": 44,
+      "Contested Catch": 49,
+      "Man YPRR": 89,
+      "Zone YPRR": 79
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Sam Roush",
+    "school": "STANFORD",
+    "percentiles": {
+      "YPRR": 60,
+      "Threat Rate": 79,
+      "1D/Route": 28,
+      "YAC/Rec": 73,
+      "ADOT": 22,
+      "Contested Catch": 36,
+      "Man YPRR": 72,
+      "Zone YPRR": 60
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Brody Foley",
+    "school": "TULSA",
+    "percentiles": {
+      "YPRR": 89,
+      "Threat Rate": 68,
+      "1D/Route": 83,
+      "YAC/Rec": 91,
+      "ADOT": 59,
+      "Contested Catch": 23,
+      "Man YPRR": 77,
+      "Zone YPRR": 86
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jamari Johnson",
+    "school": "OREGON",
+    "percentiles": {
+      "YPRR": 96,
+      "Threat Rate": 70,
+      "1D/Route": 90,
+      "YAC/Rec": 96,
+      "ADOT": 42,
+      "Contested Catch": 49,
+      "Man YPRR": 99,
+      "Zone YPRR": 74
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Tanner Koziol",
+    "school": "HOUSTON",
+    "percentiles": {
+      "YPRR": 94,
+      "Threat Rate": 98,
+      "1D/Route": 98,
+      "YAC/Rec": 20,
+      "ADOT": 30,
+      "Contested Catch": 87,
+      "Man YPRR": 82,
+      "Zone YPRR": 98
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jeremiah Hasley",
+    "school": "DUKE",
+    "percentiles": {
+      "YPRR": 58,
+      "Threat Rate": 33,
+      "1D/Route": 33,
+      "YAC/Rec": 83,
+      "ADOT": 15,
+      "Contested Catch": 68,
+      "Man YPRR": 59,
+      "Zone YPRR": 66
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jyrin Johnson",
+    "school": "BOWL GREEN",
+    "percentiles": {
+      "YPRR": 81,
+      "Threat Rate": 83,
+      "1D/Route": 81,
+      "YAC/Rec": 84,
+      "ADOT": 26,
+      "Contested Catch": 75,
+      "Man YPRR": 56,
+      "Zone YPRR": 76
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jaren Kanak",
+    "school": "OKLAHOMA",
+    "percentiles": {
+      "YPRR": 79,
+      "Threat Rate": 66,
+      "1D/Route": 56,
+      "YAC/Rec": 65,
+      "ADOT": 41,
+      "Contested Catch": 71,
+      "Man YPRR": 31,
+      "Zone YPRR": 80
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Izayah Cummings",
+    "school": "APP STATE",
+    "percentiles": {
+      "YPRR": 95,
+      "Threat Rate": 98,
+      "1D/Route": 96,
+      "YAC/Rec": 82,
+      "ADOT": 2,
+      "Contested Catch": 93,
+      "Man YPRR": 90,
+      "Zone YPRR": 94
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Dallen Bentley",
+    "school": "UTAH",
+    "percentiles": {
+      "YPRR": 90,
+      "Threat Rate": 93,
+      "1D/Route": 91,
+      "YAC/Rec": 52,
+      "ADOT": 86,
+      "Contested Catch": 20,
+      "Man YPRR": 67,
+      "Zone YPRR": 81
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Joe Royer",
+    "school": "CINCINNATI",
+    "percentiles": {
+      "YPRR": 68,
+      "Threat Rate": 12,
+      "1D/Route": 38,
+      "YAC/Rec": 95,
+      "ADOT": 21,
+      "Contested Catch": 87,
+      "Man YPRR": 38,
+      "Zone YPRR": 80
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Kenyon Sadiq",
+    "school": "OREGON",
+    "percentiles": {
+      "YPRR": 75,
+      "Threat Rate": 73,
+      "1D/Route": 81,
+      "YAC/Rec": 41,
+      "ADOT": 54,
+      "Contested Catch": 70,
+      "Man YPRR": 61,
+      "Zone YPRR": 70
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Riley Nowakowski",
+    "school": "INDIANA",
+    "percentiles": {
+      "YPRR": 75,
+      "Threat Rate": 39,
+      "1D/Route": 47,
+      "YAC/Rec": 88,
+      "ADOT": 11,
+      "Contested Catch": 68,
+      "Man YPRR": 69,
+      "Zone YPRR": 59
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Josh Cuevas",
+    "school": "ALABAMA",
+    "percentiles": {
+      "YPRR": 47,
+      "Threat Rate": 41,
+      "1D/Route": 64,
+      "YAC/Rec": 74,
+      "ADOT": 14,
+      "Contested Catch": 49,
+      "Man YPRR": 66,
+      "Zone YPRR": 45
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Dorian Fleming",
+    "school": "MARYLAND",
+    "percentiles": {
+      "YPRR": 31,
+      "Threat Rate": 72,
+      "1D/Route": 44,
+      "YAC/Rec": 61,
+      "ADOT": 6,
+      "Contested Catch": 78,
+      "Man YPRR": 70,
+      "Zone YPRR": 13
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Rohan Jones",
+    "school": "ARKANSAS",
+    "percentiles": {
+      "YPRR": 100,
+      "Threat Rate": 90,
+      "1D/Route": 100,
+      "YAC/Rec": 99,
+      "ADOT": 99,
+      "Contested Catch": 78,
+      "Man YPRR": 64,
+      "Zone YPRR": 100
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Chamon Metayer",
+    "school": "ARIZONA ST",
+    "percentiles": {
+      "YPRR": 57,
+      "Threat Rate": 64,
+      "1D/Route": 63,
+      "YAC/Rec": 64,
+      "ADOT": 11,
+      "Contested Catch": 85,
+      "Man YPRR": 60,
+      "Zone YPRR": 35
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Ethan Conner",
+    "school": "TROY",
+    "percentiles": {
+      "YPRR": 40,
+      "Threat Rate": 21,
+      "1D/Route": 35,
+      "YAC/Rec": 84,
+      "ADOT": 20,
+      "Contested Catch": 20,
+      "Man YPRR": 90,
+      "Zone YPRR": 15
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Boden Groen",
+    "school": "KANSAS",
+    "percentiles": {
+      "YPRR": 84,
+      "Threat Rate": 65,
+      "1D/Route": 79,
+      "YAC/Rec": 70,
+      "ADOT": 29,
+      "Contested Catch": 0,
+      "Man YPRR": 67,
+      "Zone YPRR": 77
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Eli Finley",
+    "school": "LA TECH",
+    "percentiles": {
+      "YPRR": 84,
+      "Threat Rate": 75,
+      "1D/Route": 58,
+      "YAC/Rec": 65,
+      "ADOT": 37,
+      "Contested Catch": 68,
+      "Man YPRR": 98,
+      "Zone YPRR": 58
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Hunter Tipton",
+    "school": "MIDDLE TN",
+    "percentiles": {
+      "YPRR": 36,
+      "Threat Rate": 22,
+      "1D/Route": 38,
+      "YAC/Rec": 60,
+      "ADOT": 10,
+      "Contested Catch": 90,
+      "Man YPRR": 40,
+      "Zone YPRR": 32
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Michael Trigg",
+    "school": "BAYLOR",
+    "percentiles": {
+      "YPRR": 93,
+      "Threat Rate": 96,
+      "1D/Route": 88,
+      "YAC/Rec": 32,
+      "ADOT": 89,
+      "Contested Catch": 42,
+      "Man YPRR": 89,
+      "Zone YPRR": 84
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Max Klare",
+    "school": "OHIO STATE",
+    "percentiles": {
+      "YPRR": 67,
+      "Threat Rate": 64,
+      "1D/Route": 63,
+      "YAC/Rec": 47,
+      "ADOT": 30,
+      "Contested Catch": 78,
+      "Man YPRR": 81,
+      "Zone YPRR": 49
+    }
+  },
+  {
+    "position": "TE",
+    "name": "DJ Vonnahme",
+    "school": "IOWA",
+    "percentiles": {
+      "YPRR": 99,
+      "Threat Rate": 96,
+      "1D/Route": 98,
+      "YAC/Rec": 88,
+      "ADOT": 70,
+      "Contested Catch": 93,
+      "Man YPRR": 99,
+      "Zone YPRR": 94
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Seydou Traore",
+    "school": "MISS STATE",
+    "percentiles": {
+      "YPRR": 31,
+      "Threat Rate": 25,
+      "1D/Route": 36,
+      "YAC/Rec": 70,
+      "ADOT": 42,
+      "Contested Catch": 36,
+      "Man YPRR": 60,
+      "Zone YPRR": 40
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Garrett Oakley",
+    "school": "KANSAS ST",
+    "percentiles": {
+      "YPRR": 76,
+      "Threat Rate": 92,
+      "1D/Route": 82,
+      "YAC/Rec": 58,
+      "ADOT": 21,
+      "Contested Catch": 87,
+      "Man YPRR": 57,
+      "Zone YPRR": 89
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Peter Clarke",
+    "school": "TEMPLE",
+    "percentiles": {
+      "YPRR": 94,
+      "Threat Rate": 76,
+      "1D/Route": 95,
+      "YAC/Rec": 82,
+      "ADOT": 77,
+      "Contested Catch": 78,
+      "Man YPRR": 54,
+      "Zone YPRR": 97
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Matthew Hibner",
+    "school": "SMU",
+    "percentiles": {
+      "YPRR": 57,
+      "Threat Rate": 22,
+      "1D/Route": 35,
+      "YAC/Rec": 77,
+      "ADOT": 62,
+      "Contested Catch": 66,
+      "Man YPRR": 39,
+      "Zone YPRR": 58
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Kenny Fletcher Jr.",
+    "school": "RUTGERS",
+    "percentiles": {
+      "YPRR": 46,
+      "Threat Rate": 73,
+      "1D/Route": 56,
+      "YAC/Rec": 91,
+      "ADOT": 1,
+      "Contested Catch": 0,
+      "Man YPRR": 54,
+      "Zone YPRR": 42
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Decker DeGraaf",
+    "school": "WASHINGTON",
+    "percentiles": {
+      "YPRR": 35,
+      "Threat Rate": 14,
+      "1D/Route": 30,
+      "YAC/Rec": 74,
+      "ADOT": 12,
+      "Contested Catch": 71,
+      "Man YPRR": 26,
+      "Zone YPRR": 50
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jett Carpenter",
+    "school": "NEVADA",
+    "percentiles": {
+      "YPRR": 69,
+      "Threat Rate": 73,
+      "1D/Route": 50,
+      "YAC/Rec": 61,
+      "ADOT": 25,
+      "Contested Catch": 78,
+      "Man YPRR": 65,
+      "Zone YPRR": 72
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Trey'Dez Green",
+    "school": "LSU",
+    "percentiles": {
+      "YPRR": 74,
+      "Threat Rate": 69,
+      "1D/Route": 86,
+      "YAC/Rec": 65,
+      "ADOT": 71,
+      "Contested Catch": 71,
+      "Man YPRR": 97,
+      "Zone YPRR": 41
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jayvontay Conner",
+    "school": "E CAROLINA",
+    "percentiles": {
+      "YPRR": 94,
+      "Threat Rate": 86,
+      "1D/Route": 92,
+      "YAC/Rec": 94,
+      "ADOT": 59,
+      "Contested Catch": 23,
+      "Man YPRR": 46,
+      "Zone YPRR": 99
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Gavin Harris",
+    "school": "NEW MEX ST",
+    "percentiles": {
+      "YPRR": 53,
+      "Threat Rate": 45,
+      "1D/Route": 44,
+      "YAC/Rec": 50,
+      "ADOT": 78,
+      "Contested Catch": 49,
+      "Man YPRR": 68,
+      "Zone YPRR": 18
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Mason Williams",
+    "school": "OHIO",
+    "percentiles": {
+      "YPRR": 78,
+      "Threat Rate": 74,
+      "1D/Route": 84,
+      "YAC/Rec": 85,
+      "ADOT": 8,
+      "Contested Catch": 36,
+      "Man YPRR": 93,
+      "Zone YPRR": 36
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Matt Lauter",
+    "school": "BOISE ST",
+    "percentiles": {
+      "YPRR": 31,
+      "Threat Rate": 61,
+      "1D/Route": 24,
+      "YAC/Rec": 45,
+      "ADOT": 12,
+      "Contested Catch": 71,
+      "Man YPRR": 41,
+      "Zone YPRR": 29
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Bruin Fleischmann",
+    "school": "AIR FORCE",
+    "percentiles": {
+      "YPRR": 95,
+      "Threat Rate": 73,
+      "1D/Route": 93,
+      "YAC/Rec": 95,
+      "ADOT": 83,
+      "Contested Catch": 93,
+      "Man YPRR": 100,
+      "Zone YPRR": 68
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Lake McRee",
+    "school": "USC",
+    "percentiles": {
+      "YPRR": 68,
+      "Threat Rate": 51,
+      "1D/Route": 60,
+      "YAC/Rec": 68,
+      "ADOT": 59,
+      "Contested Catch": 77,
+      "Man YPRR": 33,
+      "Zone YPRR": 74
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Eli Raridon",
+    "school": "NOTRE DAME",
+    "percentiles": {
+      "YPRR": 93,
+      "Threat Rate": 77,
+      "1D/Route": 85,
+      "YAC/Rec": 60,
+      "ADOT": 51,
+      "Contested Catch": 78,
+      "Man YPRR": 51,
+      "Zone YPRR": 97
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Luke Lindenmeyer",
+    "school": "NEBRASKA",
+    "percentiles": {
+      "YPRR": 33,
+      "Threat Rate": 15,
+      "1D/Route": 29,
+      "YAC/Rec": 70,
+      "ADOT": 14,
+      "Contested Catch": 78,
+      "Man YPRR": 23,
+      "Zone YPRR": 50
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Tre Williams III",
+    "school": "N TEXAS",
+    "percentiles": {
+      "YPRR": 45,
+      "Threat Rate": 18,
+      "1D/Route": 35,
+      "YAC/Rec": 65,
+      "ADOT": 37,
+      "Contested Catch": 11,
+      "Man YPRR": 84,
+      "Zone YPRR": 37
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Desirrio Riles",
+    "school": "E CAROLINA",
+    "percentiles": {
+      "YPRR": 79,
+      "Threat Rate": 78,
+      "1D/Route": 78,
+      "YAC/Rec": 72,
+      "ADOT": 46,
+      "Contested Catch": 86,
+      "Man YPRR": 51,
+      "Zone YPRR": 88
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Justin Joly",
+    "school": "NC STATE",
+    "percentiles": {
+      "YPRR": 82,
+      "Threat Rate": 93,
+      "1D/Route": 91,
+      "YAC/Rec": 14,
+      "ADOT": 42,
+      "Contested Catch": 71,
+      "Man YPRR": 50,
+      "Zone YPRR": 90
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Rocky Beers",
+    "school": "COLO STATE",
+    "percentiles": {
+      "YPRR": 58,
+      "Threat Rate": 26,
+      "1D/Route": 53,
+      "YAC/Rec": 58,
+      "ADOT": 46,
+      "Contested Catch": 93,
+      "Man YPRR": 56,
+      "Zone YPRR": 63
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jeremiah Franklin",
+    "school": "BOSTON COL",
+    "percentiles": {
+      "YPRR": 68,
+      "Threat Rate": 79,
+      "1D/Route": 69,
+      "YAC/Rec": 12,
+      "ADOT": 53,
+      "Contested Catch": 22,
+      "Man YPRR": 39,
+      "Zone YPRR": 59
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Lance Mason",
+    "school": "WISCONSIN",
+    "percentiles": {
+      "YPRR": 85,
+      "Threat Rate": 88,
+      "1D/Route": 86,
+      "YAC/Rec": 56,
+      "ADOT": 54,
+      "Contested Catch": 15,
+      "Man YPRR": 70,
+      "Zone YPRR": 68
+    }
+  },
+  {
+    "position": "TE",
+    "name": "DJ Rogers",
+    "school": "TCU",
+    "percentiles": {
+      "YPRR": 57,
+      "Threat Rate": 56,
+      "1D/Route": 73,
+      "YAC/Rec": 43,
+      "ADOT": 12,
+      "Contested Catch": 78,
+      "Man YPRR": 47,
+      "Zone YPRR": 55
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Dan Villari",
+    "school": "SYRACUSE",
+    "percentiles": {
+      "YPRR": 34,
+      "Threat Rate": 37,
+      "1D/Route": 21,
+      "YAC/Rec": 28,
+      "ADOT": 30,
+      "Contested Catch": 76,
+      "Man YPRR": 12,
+      "Zone YPRR": 56
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Dallas Payne",
+    "school": "FIU",
+    "percentiles": {
+      "YPRR": 57,
+      "Threat Rate": 46,
+      "1D/Route": 65,
+      "YAC/Rec": 68,
+      "ADOT": 10,
+      "Contested Catch": 93,
+      "Man YPRR": 83,
+      "Zone YPRR": 42
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Matt Wagner",
+    "school": "BOISE ST",
+    "percentiles": {
+      "YPRR": 60,
+      "Threat Rate": 62,
+      "1D/Route": 54,
+      "YAC/Rec": 79,
+      "ADOT": 3,
+      "Contested Catch": 68,
+      "Man YPRR": 81,
+      "Zone YPRR": 40
+    }
+  },
+  {
+    "position": "TE",
+    "name": "RJ Maryland",
+    "school": "SMU",
+    "percentiles": {
+      "YPRR": 75,
+      "Threat Rate": 72,
+      "1D/Route": 74,
+      "YAC/Rec": 65,
+      "ADOT": 46,
+      "Contested Catch": 10,
+      "Man YPRR": 9,
+      "Zone YPRR": 85
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Willie Rodriguez",
+    "school": "KENTUCKY",
+    "percentiles": {
+      "YPRR": 60,
+      "Threat Rate": 63,
+      "1D/Route": 51,
+      "YAC/Rec": 82,
+      "ADOT": 88,
+      "Contested Catch": 23,
+      "Man YPRR": 64,
+      "Zone YPRR": 52
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Noah Meyers",
+    "school": "W KENTUCKY",
+    "percentiles": {
+      "YPRR": 54,
+      "Threat Rate": 30,
+      "1D/Route": 46,
+      "YAC/Rec": 45,
+      "ADOT": 14,
+      "Contested Catch": 71,
+      "Man YPRR": 14,
+      "Zone YPRR": 76
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jack Endries",
+    "school": "TEXAS",
+    "percentiles": {
+      "YPRR": 32,
+      "Threat Rate": 28,
+      "1D/Route": 14,
+      "YAC/Rec": 41,
+      "ADOT": 53,
+      "Contested Catch": 71,
+      "Man YPRR": 33,
+      "Zone YPRR": 31
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Patrick Overmyer",
+    "school": "UTSA",
+    "percentiles": {
+      "YPRR": 73,
+      "Threat Rate": 82,
+      "1D/Route": 65,
+      "YAC/Rec": 61,
+      "ADOT": 75,
+      "Contested Catch": 49,
+      "Man YPRR": 45,
+      "Zone YPRR": 77
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Luke Reynolds",
+    "school": "PENN STATE",
+    "percentiles": {
+      "YPRR": 46,
+      "Threat Rate": 54,
+      "1D/Route": 39,
+      "YAC/Rec": 64,
+      "ADOT": 14,
+      "Contested Catch": 68,
+      "Man YPRR": 56,
+      "Zone YPRR": 54
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jack Velling",
+    "school": "MICH STATE",
+    "percentiles": {
+      "YPRR": 41,
+      "Threat Rate": 34,
+      "1D/Route": 47,
+      "YAC/Rec": 30,
+      "ADOT": 34,
+      "Contested Catch": 78,
+      "Man YPRR": 12,
+      "Zone YPRR": 78
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Brett Norfleet",
+    "school": "MISSOURI",
+    "percentiles": {
+      "YPRR": 28,
+      "Threat Rate": 58,
+      "1D/Route": 34,
+      "YAC/Rec": 43,
+      "ADOT": 6,
+      "Contested Catch": 20,
+      "Man YPRR": 45,
+      "Zone YPRR": 23
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Benjamin Brahmer",
+    "school": "IOWA STATE",
+    "percentiles": {
+      "YPRR": 68,
+      "Threat Rate": 55,
+      "1D/Route": 76,
+      "YAC/Rec": 26,
+      "ADOT": 77,
+      "Contested Catch": 43,
+      "Man YPRR": 76,
+      "Zone YPRR": 40
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Mason Mini",
+    "school": "CAL",
+    "percentiles": {
+      "YPRR": 60,
+      "Threat Rate": 55,
+      "1D/Route": 51,
+      "YAC/Rec": 30,
+      "ADOT": 37,
+      "Contested Catch": 49,
+      "Man YPRR": 62,
+      "Zone YPRR": 56
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Oscar Delp",
+    "school": "GEORGIA",
+    "percentiles": {
+      "YPRR": 50,
+      "Threat Rate": 26,
+      "1D/Route": 48,
+      "YAC/Rec": 88,
+      "ADOT": 51,
+      "Contested Catch": 15,
+      "Man YPRR": 9,
+      "Zone YPRR": 54
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Joshua Long",
+    "school": "E MICHIGAN",
+    "percentiles": {
+      "YPRR": 31,
+      "Threat Rate": 57,
+      "1D/Route": 36,
+      "YAC/Rec": 24,
+      "ADOT": 37,
+      "Contested Catch": 47,
+      "Man YPRR": 41,
+      "Zone YPRR": 36
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Gabe Burkle",
+    "school": "IOWA STATE",
+    "percentiles": {
+      "YPRR": 70,
+      "Threat Rate": 74,
+      "1D/Route": 69,
+      "YAC/Rec": 58,
+      "ADOT": 25,
+      "Contested Catch": 20,
+      "Man YPRR": 68,
+      "Zone YPRR": 48
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Justin Holmes",
+    "school": "PITTSBURGH",
+    "percentiles": {
+      "YPRR": 42,
+      "Threat Rate": 42,
+      "1D/Route": 47,
+      "YAC/Rec": 47,
+      "ADOT": 42,
+      "Contested Catch": 0,
+      "Man YPRR": 8,
+      "Zone YPRR": 52
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Miles Kitselman",
+    "school": "TENNESSEE",
+    "percentiles": {
+      "YPRR": 53,
+      "Threat Rate": 80,
+      "1D/Route": 65,
+      "YAC/Rec": 52,
+      "ADOT": 16,
+      "Contested Catch": 15,
+      "Man YPRR": 83,
+      "Zone YPRR": 25
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Bauer Sharp",
+    "school": "LSU",
+    "percentiles": {
+      "YPRR": 37,
+      "Threat Rate": 30,
+      "1D/Route": 9,
+      "YAC/Rec": 64,
+      "ADOT": 7,
+      "Contested Catch": 71,
+      "Man YPRR": 12,
+      "Zone YPRR": 29
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Ethan Davis",
+    "school": "TENNESSEE",
+    "percentiles": {
+      "YPRR": 80,
+      "Threat Rate": 78,
+      "1D/Route": 74,
+      "YAC/Rec": 79,
+      "ADOT": 32,
+      "Contested Catch": 87,
+      "Man YPRR": 82,
+      "Zone YPRR": 83
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Houston Thomas",
+    "school": "UTSA",
+    "percentiles": {
+      "YPRR": 75,
+      "Threat Rate": 84,
+      "1D/Route": 67,
+      "YAC/Rec": 26,
+      "ADOT": 39,
+      "Contested Catch": 49,
+      "Man YPRR": 18,
+      "Zone YPRR": 90
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Pearson Baldwin",
+    "school": "JVILLE ST",
+    "percentiles": {
+      "YPRR": 25,
+      "Threat Rate": 21,
+      "1D/Route": 16,
+      "YAC/Rec": 52,
+      "ADOT": 37,
+      "Contested Catch": 23,
+      "Man YPRR": 47,
+      "Zone YPRR": 31
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Richie Anderson III",
+    "school": "FRESNO ST",
+    "percentiles": {
+      "YPRR": 34,
+      "Threat Rate": 56,
+      "1D/Route": 33,
+      "YAC/Rec": 32,
+      "ADOT": 41,
+      "Contested Catch": 93,
+      "Man YPRR": 53,
+      "Zone YPRR": 25
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Hunter Welcing",
+    "school": "NWESTERN",
+    "percentiles": {
+      "YPRR": 66,
+      "Threat Rate": 69,
+      "1D/Route": 83,
+      "YAC/Rec": 39,
+      "ADOT": 44,
+      "Contested Catch": 23,
+      "Man YPRR": 43,
+      "Zone YPRR": 75
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Justyn Reid",
+    "school": "TULANE",
+    "percentiles": {
+      "YPRR": 40,
+      "Threat Rate": 59,
+      "1D/Route": 39,
+      "YAC/Rec": 89,
+      "ADOT": 26,
+      "Contested Catch": 49,
+      "Man YPRR": 11,
+      "Zone YPRR": 64
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Marlin Klein",
+    "school": "MICHIGAN",
+    "percentiles": {
+      "YPRR": 68,
+      "Threat Rate": 93,
+      "1D/Route": 44,
+      "YAC/Rec": 54,
+      "ADOT": 59,
+      "Contested Catch": 36,
+      "Man YPRR": 11,
+      "Zone YPRR": 41
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Andrew Rappleyea",
+    "school": "PENN STATE",
+    "percentiles": {
+      "YPRR": 53,
+      "Threat Rate": 47,
+      "1D/Route": 72,
+      "YAC/Rec": 74,
+      "ADOT": 2,
+      "Contested Catch": 49,
+      "Man YPRR": 99,
+      "Zone YPRR": 7
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Blake Bosma",
+    "school": "W MICHIGAN",
+    "percentiles": {
+      "YPRR": 35,
+      "Threat Rate": 38,
+      "1D/Route": 32,
+      "YAC/Rec": 43,
+      "ADOT": 13,
+      "Contested Catch": 93,
+      "Man YPRR": 34,
+      "Zone YPRR": 49
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Tyler Fortenberry",
+    "school": "ARK STATE",
+    "percentiles": {
+      "YPRR": 13,
+      "Threat Rate": 10,
+      "1D/Route": 43,
+      "YAC/Rec": 24,
+      "ADOT": 41,
+      "Contested Catch": 23,
+      "Man YPRR": 13,
+      "Zone YPRR": 29
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Juice Vereen",
+    "school": "UCONN",
+    "percentiles": {
+      "YPRR": 92,
+      "Threat Rate": 85,
+      "1D/Route": 76,
+      "YAC/Rec": 61,
+      "ADOT": 82,
+      "Contested Catch": 71,
+      "Man YPRR": 62,
+      "Zone YPRR": 92
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Cade Keith",
+    "school": "NEW MEXICO",
+    "percentiles": {
+      "YPRR": 88,
+      "Threat Rate": 57,
+      "1D/Route": 70,
+      "YAC/Rec": 73,
+      "ADOT": 29,
+      "Contested Catch": 93,
+      "Man YPRR": 89,
+      "Zone YPRR": 81
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Caden Jensen",
+    "school": "LA LAFAYET",
+    "percentiles": {
+      "YPRR": 30,
+      "Threat Rate": 69,
+      "1D/Route": 6,
+      "YAC/Rec": 30,
+      "ADOT": 4,
+      "Contested Catch": 71,
+      "Man YPRR": 58,
+      "Zone YPRR": 31
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Elija Lofton",
+    "school": "MIAMI FL",
+    "percentiles": {
+      "YPRR": 41,
+      "Threat Rate": 53,
+      "1D/Route": 42,
+      "YAC/Rec": 56,
+      "ADOT": 14,
+      "Contested Catch": 49,
+      "Man YPRR": 59,
+      "Zone YPRR": 49
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jacob Petersen",
+    "school": "TOLEDO",
+    "percentiles": {
+      "YPRR": 38,
+      "Threat Rate": 16,
+      "1D/Route": 22,
+      "YAC/Rec": 45,
+      "ADOT": 75,
+      "Contested Catch": 11,
+      "Man YPRR": 40,
+      "Zone YPRR": 61
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Wyatt Sullivan",
+    "school": "USF",
+    "percentiles": {
+      "YPRR": 36,
+      "Threat Rate": 47,
+      "1D/Route": 38,
+      "YAC/Rec": 82,
+      "ADOT": 5,
+      "Contested Catch": 0,
+      "Man YPRR": 45,
+      "Zone YPRR": 50
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Alex Bauman",
+    "school": "MIAMI FL",
+    "percentiles": {
+      "YPRR": 6,
+      "Threat Rate": 9,
+      "1D/Route": 5,
+      "YAC/Rec": 82,
+      "ADOT": 36,
+      "Contested Catch": 11,
+      "Man YPRR": 13,
+      "Zone YPRR": 9
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jaden Platt",
+    "school": "ARKANSAS",
+    "percentiles": {
+      "YPRR": 57,
+      "Threat Rate": 42,
+      "1D/Route": 62,
+      "YAC/Rec": 68,
+      "ADOT": 64,
+      "Contested Catch": 11,
+      "Man YPRR": 72,
+      "Zone YPRR": 56
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Caleb Odom",
+    "school": "OLE MISS",
+    "percentiles": {
+      "YPRR": 84,
+      "Threat Rate": 95,
+      "1D/Route": 91,
+      "YAC/Rec": 72,
+      "ADOT": 13,
+      "Contested Catch": 23,
+      "Man YPRR": 50,
+      "Zone YPRR": 92
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Louis Hansen",
+    "school": "UCONN",
+    "percentiles": {
+      "YPRR": 53,
+      "Threat Rate": 59,
+      "1D/Route": 44,
+      "YAC/Rec": 65,
+      "ADOT": 8,
+      "Contested Catch": 0,
+      "Man YPRR": 0,
+      "Zone YPRR": 70
+    }
+  },
+  {
+    "position": "TE",
+    "name": "John Michael Gyllenborg",
+    "school": "WYOMING",
+    "percentiles": {
+      "YPRR": 41,
+      "Threat Rate": 74,
+      "1D/Route": 45,
+      "YAC/Rec": 41,
+      "ADOT": 26,
+      "Contested Catch": 23,
+      "Man YPRR": 80,
+      "Zone YPRR": 14
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Toby Payne",
+    "school": "MARSHALL",
+    "percentiles": {
+      "YPRR": 54,
+      "Threat Rate": 42,
+      "1D/Route": 48,
+      "YAC/Rec": 8,
+      "ADOT": 39,
+      "Contested Catch": 68,
+      "Man YPRR": 77,
+      "Zone YPRR": 55
+    }
+  },
+  {
+    "position": "TE",
+    "name": "David Larkins",
+    "school": "APP STATE",
+    "percentiles": {
+      "YPRR": 35,
+      "Threat Rate": 54,
+      "1D/Route": 53,
+      "YAC/Rec": 36,
+      "ADOT": 30,
+      "Contested Catch": 49,
+      "Man YPRR": 30,
+      "Zone YPRR": 63
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Christian Bentancur",
+    "school": "CLEMSON",
+    "percentiles": {
+      "YPRR": 64,
+      "Threat Rate": 54,
+      "1D/Route": 31,
+      "YAC/Rec": 60,
+      "ADOT": 49,
+      "Contested Catch": 23,
+      "Man YPRR": 89,
+      "Zone YPRR": 35
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Walker Lyons",
+    "school": "USC",
+    "percentiles": {
+      "YPRR": 62,
+      "Threat Rate": 52,
+      "1D/Route": 87,
+      "YAC/Rec": 60,
+      "ADOT": 59,
+      "Contested Catch": 93,
+      "Man YPRR": 31,
+      "Zone YPRR": 86
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Grant Hollier",
+    "school": "GA STATE",
+    "percentiles": {
+      "YPRR": 55,
+      "Threat Rate": 40,
+      "1D/Route": 70,
+      "YAC/Rec": 54,
+      "ADOT": 81,
+      "Contested Catch": 11,
+      "Man YPRR": 40,
+      "Zone YPRR": 39
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Josh Schuchts",
+    "school": "UTEP",
+    "percentiles": {
+      "YPRR": 56,
+      "Threat Rate": 28,
+      "1D/Route": 39,
+      "YAC/Rec": 52,
+      "ADOT": 12,
+      "Contested Catch": 23,
+      "Man YPRR": 30,
+      "Zone YPRR": 71
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Brady Hunt",
+    "school": "S CAROLINA",
+    "percentiles": {
+      "YPRR": 20,
+      "Threat Rate": 28,
+      "1D/Route": 6,
+      "YAC/Rec": 52,
+      "ADOT": 2,
+      "Contested Catch": 49,
+      "Man YPRR": 10,
+      "Zone YPRR": 37
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jeron Askren",
+    "school": "MO STATE",
+    "percentiles": {
+      "YPRR": 38,
+      "Threat Rate": 21,
+      "1D/Route": 31,
+      "YAC/Rec": 68,
+      "ADOT": 37,
+      "Contested Catch": 49,
+      "Man YPRR": 16,
+      "Zone YPRR": 10
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Christian Ross",
+    "school": "MEMPHIS",
+    "percentiles": {
+      "YPRR": 25,
+      "Threat Rate": 21,
+      "1D/Route": 19,
+      "YAC/Rec": 68,
+      "ADOT": 21,
+      "Contested Catch": 49,
+      "Man YPRR": 38,
+      "Zone YPRR": 36
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Trey Leckner",
+    "school": "WASH STATE",
+    "percentiles": {
+      "YPRR": 48,
+      "Threat Rate": 86,
+      "1D/Route": 66,
+      "YAC/Rec": 34,
+      "ADOT": 11,
+      "Contested Catch": 49,
+      "Man YPRR": 60,
+      "Zone YPRR": 48
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Bryce Caufield",
+    "school": "OREGON ST",
+    "percentiles": {
+      "YPRR": 24,
+      "Threat Rate": 61,
+      "1D/Route": 18,
+      "YAC/Rec": 18,
+      "ADOT": 6,
+      "Contested Catch": 36,
+      "Man YPRR": 56,
+      "Zone YPRR": 9
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Eni Falayi",
+    "school": "WAKE",
+    "percentiles": {
+      "YPRR": 24,
+      "Threat Rate": 11,
+      "1D/Route": 40,
+      "YAC/Rec": 47,
+      "ADOT": 25,
+      "Contested Catch": 78,
+      "Man YPRR": 14,
+      "Zone YPRR": 39
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jaleel Skinner",
+    "school": "LOUISVILLE",
+    "percentiles": {
+      "YPRR": 38,
+      "Threat Rate": 58,
+      "1D/Route": 45,
+      "YAC/Rec": 45,
+      "ADOT": 46,
+      "Contested Catch": 78,
+      "Man YPRR": 91,
+      "Zone YPRR": 22
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Lacota Dippre",
+    "school": "JAMES MAD",
+    "percentiles": {
+      "YPRR": 41,
+      "Threat Rate": 44,
+      "1D/Route": 51,
+      "YAC/Rec": 68,
+      "ADOT": 34,
+      "Contested Catch": 71,
+      "Man YPRR": 80,
+      "Zone YPRR": 33
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Josh Kattus",
+    "school": "KENTUCKY",
+    "percentiles": {
+      "YPRR": 41,
+      "Threat Rate": 49,
+      "1D/Route": 43,
+      "YAC/Rec": 65,
+      "ADOT": 78,
+      "Contested Catch": 43,
+      "Man YPRR": 86,
+      "Zone YPRR": 24
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Zack Marshall",
+    "school": "MICHIGAN",
+    "percentiles": {
+      "YPRR": 71,
+      "Threat Rate": 46,
+      "1D/Route": 71,
+      "YAC/Rec": 72,
+      "ADOT": 61,
+      "Contested Catch": 93,
+      "Man YPRR": 93,
+      "Zone YPRR": 37
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Kyirin Heath",
+    "school": "SO MISS",
+    "percentiles": {
+      "YPRR": 47,
+      "Threat Rate": 31,
+      "1D/Route": 12,
+      "YAC/Rec": 50,
+      "ADOT": 61,
+      "Contested Catch": 78,
+      "Man YPRR": 52,
+      "Zone YPRR": 33
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Zach Atkins",
+    "school": "COLORADO",
+    "percentiles": {
+      "YPRR": 10,
+      "Threat Rate": 33,
+      "1D/Route": 4,
+      "YAC/Rec": 45,
+      "ADOT": 4,
+      "Contested Catch": 78,
+      "Man YPRR": 17,
+      "Zone YPRR": 29
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Terik Mulder",
+    "school": "KENT STATE",
+    "percentiles": {
+      "YPRR": 76,
+      "Threat Rate": 80,
+      "1D/Route": 76,
+      "YAC/Rec": 50,
+      "ADOT": 44,
+      "Contested Catch": 93,
+      "Man YPRR": 65,
+      "Zone YPRR": 89
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Hayden Hansen",
+    "school": "FLORIDA",
+    "percentiles": {
+      "YPRR": 12,
+      "Threat Rate": 38,
+      "1D/Route": 11,
+      "YAC/Rec": 8,
+      "ADOT": 27,
+      "Contested Catch": 49,
+      "Man YPRR": 37,
+      "Zone YPRR": 16
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Gabe Milbourn",
+    "school": "OREGON ST",
+    "percentiles": {
+      "YPRR": 59,
+      "Threat Rate": 73,
+      "1D/Route": 66,
+      "YAC/Rec": 56,
+      "ADOT": 27,
+      "Contested Catch": 78,
+      "Man YPRR": 46,
+      "Zone YPRR": 71
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Kaelan Chudzinski",
+    "school": "BOSTON COL",
+    "percentiles": {
+      "YPRR": 94,
+      "Threat Rate": 98,
+      "1D/Route": 86,
+      "YAC/Rec": 20,
+      "ADOT": 82,
+      "Contested Catch": 48,
+      "Man YPRR": 87,
+      "Zone YPRR": 94
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Alex Honig",
+    "school": "UCONN",
+    "percentiles": {
+      "YPRR": 56,
+      "Threat Rate": 70,
+      "1D/Route": 52,
+      "YAC/Rec": 83,
+      "ADOT": 48,
+      "Contested Catch": 49,
+      "Man YPRR": 88,
+      "Zone YPRR": 33
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Gerard Bullock Jr.",
+    "school": "KENNESAW",
+    "percentiles": {
+      "YPRR": 6,
+      "Threat Rate": 7,
+      "1D/Route": 4,
+      "YAC/Rec": 18,
+      "ADOT": 2,
+      "Contested Catch": 90,
+      "Man YPRR": 49,
+      "Zone YPRR": 5
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Max Dowling",
+    "school": "UMASS",
+    "percentiles": {
+      "YPRR": 12,
+      "Threat Rate": 12,
+      "1D/Route": 17,
+      "YAC/Rec": 34,
+      "ADOT": 30,
+      "Contested Catch": 87,
+      "Man YPRR": 28,
+      "Zone YPRR": 19
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Ahmon Green",
+    "school": "GA SOUTHRN",
+    "percentiles": {
+      "YPRR": 3,
+      "Threat Rate": 2,
+      "1D/Route": 5,
+      "YAC/Rec": 58,
+      "ADOT": 24,
+      "Contested Catch": 23,
+      "Man YPRR": 0,
+      "Zone YPRR": 5
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jackson Canaan",
+    "school": "S JOSE ST",
+    "percentiles": {
+      "YPRR": 24,
+      "Threat Rate": 46,
+      "1D/Route": 33,
+      "YAC/Rec": 4,
+      "ADOT": 41,
+      "Contested Catch": 20,
+      "Man YPRR": 62,
+      "Zone YPRR": 18
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Theo Melin Ohrstrom",
+    "school": "TEXAS A&M",
+    "percentiles": {
+      "YPRR": 18,
+      "Threat Rate": 43,
+      "1D/Route": 37,
+      "YAC/Rec": 34,
+      "ADOT": 30,
+      "Contested Catch": 93,
+      "Man YPRR": 43,
+      "Zone YPRR": 18
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Sage Ennis",
+    "school": "VIRGINIA",
+    "percentiles": {
+      "YPRR": 14,
+      "Threat Rate": 30,
+      "1D/Route": 16,
+      "YAC/Rec": 18,
+      "ADOT": 70,
+      "Contested Catch": 23,
+      "Man YPRR": 35,
+      "Zone YPRR": 19
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Conner Cravaack",
+    "school": "AKRON",
+    "percentiles": {
+      "YPRR": 8,
+      "Threat Rate": 22,
+      "1D/Route": 16,
+      "YAC/Rec": 41,
+      "ADOT": 12,
+      "Contested Catch": 0,
+      "Man YPRR": 5,
+      "Zone YPRR": 17
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jacob Jenkins",
+    "school": "LIBERTY",
+    "percentiles": {
+      "YPRR": 76,
+      "Threat Rate": 57,
+      "1D/Route": 70,
+      "YAC/Rec": 65,
+      "ADOT": 48,
+      "Contested Catch": 11,
+      "Man YPRR": 14,
+      "Zone YPRR": 90
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Julian Nixon",
+    "school": "LA MONROE",
+    "percentiles": {
+      "YPRR": 67,
+      "Threat Rate": 84,
+      "1D/Route": 89,
+      "YAC/Rec": 56,
+      "ADOT": 32,
+      "Contested Catch": 49,
+      "Man YPRR": 72,
+      "Zone YPRR": 36
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Michael Masunas",
+    "school": "MICH STATE",
+    "percentiles": {
+      "YPRR": 91,
+      "Threat Rate": 72,
+      "1D/Route": 96,
+      "YAC/Rec": 28,
+      "ADOT": 54,
+      "Contested Catch": 49,
+      "Man YPRR": 79,
+      "Zone YPRR": 81
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Trey Miller",
+    "school": "LA LAFAYET",
+    "percentiles": {
+      "YPRR": 35,
+      "Threat Rate": 83,
+      "1D/Route": 67,
+      "YAC/Rec": 68,
+      "ADOT": 2,
+      "Contested Catch": 0,
+      "Man YPRR": 5,
+      "Zone YPRR": 68
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Michael Kirch",
+    "school": "FAU",
+    "percentiles": {
+      "YPRR": 38,
+      "Threat Rate": 46,
+      "1D/Route": 50,
+      "YAC/Rec": 50,
+      "ADOT": 18,
+      "Contested Catch": 71,
+      "Man YPRR": 84,
+      "Zone YPRR": 34
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Hudson Habermehl",
+    "school": "UCLA",
+    "percentiles": {
+      "YPRR": 5,
+      "Threat Rate": 11,
+      "1D/Route": 1,
+      "YAC/Rec": 21,
+      "ADOT": 4,
+      "Contested Catch": 93,
+      "Man YPRR": 13,
+      "Zone YPRR": 10
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Kylan Fox",
+    "school": "UCF",
+    "percentiles": {
+      "YPRR": 55,
+      "Threat Rate": 71,
+      "1D/Route": 39,
+      "YAC/Rec": 41,
+      "ADOT": 7,
+      "Contested Catch": 0,
+      "Man YPRR": 97,
+      "Zone YPRR": 5
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Nate Boerkircher",
+    "school": "TEXAS A&M",
+    "percentiles": {
+      "YPRR": 35,
+      "Threat Rate": 14,
+      "1D/Route": 63,
+      "YAC/Rec": 21,
+      "ADOT": 26,
+      "Contested Catch": 87,
+      "Man YPRR": 74,
+      "Zone YPRR": 25
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Elijah Lagg",
+    "school": "UAB",
+    "percentiles": {
+      "YPRR": 12,
+      "Threat Rate": 18,
+      "1D/Route": 7,
+      "YAC/Rec": 18,
+      "ADOT": 42,
+      "Contested Catch": 49,
+      "Man YPRR": 27,
+      "Zone YPRR": 12
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Colin Weber",
+    "school": "RUTGERS",
+    "percentiles": {
+      "YPRR": 10,
+      "Threat Rate": 64,
+      "1D/Route": 1,
+      "YAC/Rec": 30,
+      "ADOT": 0,
+      "Contested Catch": 23,
+      "Man YPRR": 23,
+      "Zone YPRR": 21
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Grayson Barnes",
+    "school": "W VIRGINIA",
+    "percentiles": {
+      "YPRR": 50,
+      "Threat Rate": 50,
+      "1D/Route": 36,
+      "YAC/Rec": 12,
+      "ADOT": 79,
+      "Contested Catch": 49,
+      "Man YPRR": 41,
+      "Zone YPRR": 71
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Cameron Barmore",
+    "school": "ARIZONA",
+    "percentiles": {
+      "YPRR": 37,
+      "Threat Rate": 31,
+      "1D/Route": 31,
+      "YAC/Rec": 14,
+      "ADOT": 36,
+      "Contested Catch": 93,
+      "Man YPRR": 32,
+      "Zone YPRR": 35
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Khalil Dinkins",
+    "school": "PENN STATE",
+    "percentiles": {
+      "YPRR": 36,
+      "Threat Rate": 30,
+      "1D/Route": 14,
+      "YAC/Rec": 41,
+      "ADOT": 46,
+      "Contested Catch": 78,
+      "Man YPRR": 0,
+      "Zone YPRR": 19
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Kanen Hamlett",
+    "school": "APP STATE",
+    "percentiles": {
+      "YPRR": 31,
+      "Threat Rate": 45,
+      "1D/Route": 29,
+      "YAC/Rec": 50,
+      "ADOT": 26,
+      "Contested Catch": 49,
+      "Man YPRR": 65,
+      "Zone YPRR": 21
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Logan Kyle",
+    "school": "JAMES MAD",
+    "percentiles": {
+      "YPRR": 16,
+      "Threat Rate": 30,
+      "1D/Route": 10,
+      "YAC/Rec": 60,
+      "ADOT": 68,
+      "Contested Catch": 36,
+      "Man YPRR": 13,
+      "Zone YPRR": 19
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jameson Geers",
+    "school": "MINNESOTA",
+    "percentiles": {
+      "YPRR": 31,
+      "Threat Rate": 81,
+      "1D/Route": 74,
+      "YAC/Rec": 2,
+      "ADOT": 57,
+      "Contested Catch": 49,
+      "Man YPRR": 52,
+      "Zone YPRR": 19
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Sam Olson",
+    "school": "ARIZONA",
+    "percentiles": {
+      "YPRR": 6,
+      "Threat Rate": 10,
+      "1D/Route": 4,
+      "YAC/Rec": 16,
+      "ADOT": 14,
+      "Contested Catch": 93,
+      "Man YPRR": 35,
+      "Zone YPRR": 4
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Gus McGee",
+    "school": "CHARLOTTE",
+    "percentiles": {
+      "YPRR": 6,
+      "Threat Rate": 5,
+      "1D/Route": 5,
+      "YAC/Rec": 32,
+      "ADOT": 8,
+      "Contested Catch": 36,
+      "Man YPRR": 22,
+      "Zone YPRR": 11
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Randy Pittman Jr.",
+    "school": "FLORIDA ST",
+    "percentiles": {
+      "YPRR": 18,
+      "Threat Rate": 37,
+      "1D/Route": 17,
+      "YAC/Rec": 4,
+      "ADOT": 65,
+      "Contested Catch": 78,
+      "Man YPRR": 20,
+      "Zone YPRR": 37
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Elijah Sessoms",
+    "school": "DELAWARE",
+    "percentiles": {
+      "YPRR": 5,
+      "Threat Rate": 3,
+      "1D/Route": 7,
+      "YAC/Rec": 5,
+      "ADOT": 39,
+      "Contested Catch": 68,
+      "Man YPRR": 17,
+      "Zone YPRR": 3
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Cole Rusk",
+    "school": "ILLINOIS",
+    "percentiles": {
+      "YPRR": 87,
+      "Threat Rate": 79,
+      "1D/Route": 83,
+      "YAC/Rec": 8,
+      "ADOT": 65,
+      "Contested Catch": 68,
+      "Man YPRR": 95,
+      "Zone YPRR": 82
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Nate Kurisky",
+    "school": "LOUISVILLE",
+    "percentiles": {
+      "YPRR": 24,
+      "Threat Rate": 55,
+      "1D/Route": 24,
+      "YAC/Rec": 6,
+      "ADOT": 18,
+      "Contested Catch": 71,
+      "Man YPRR": 64,
+      "Zone YPRR": 13
+    }
+  },
+  {
+    "position": "TE",
+    "name": "DeCorion Temple",
+    "school": "C MICHIGAN",
+    "percentiles": {
+      "YPRR": 17,
+      "Threat Rate": 39,
+      "1D/Route": 24,
+      "YAC/Rec": 10,
+      "ADOT": 30,
+      "Contested Catch": 78,
+      "Man YPRR": 20,
+      "Zone YPRR": 25
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Camden Overton-Howard",
+    "school": "GA STATE",
+    "percentiles": {
+      "YPRR": 22,
+      "Threat Rate": 60,
+      "1D/Route": 25,
+      "YAC/Rec": 12,
+      "ADOT": 29,
+      "Contested Catch": 49,
+      "Man YPRR": 24,
+      "Zone YPRR": 33
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jacob Harris",
+    "school": "BOWL GREEN",
+    "percentiles": {
+      "YPRR": 45,
+      "Threat Rate": 69,
+      "1D/Route": 54,
+      "YAC/Rec": 4,
+      "ADOT": 54,
+      "Contested Catch": 93,
+      "Man YPRR": 70,
+      "Zone YPRR": 36
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Drew Biber",
+    "school": "MINNESOTA",
+    "percentiles": {
+      "YPRR": 9,
+      "Threat Rate": 19,
+      "1D/Route": 3,
+      "YAC/Rec": 3,
+      "ADOT": 44,
+      "Contested Catch": 49,
+      "Man YPRR": 35,
+      "Zone YPRR": 11
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Kadinn Morris",
+    "school": "SO MISS",
+    "percentiles": {
+      "YPRR": 35,
+      "Threat Rate": 16,
+      "1D/Route": 32,
+      "YAC/Rec": 6,
+      "ADOT": 49,
+      "Contested Catch": 78,
+      "Man YPRR": 6,
+      "Zone YPRR": 29
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Brooks Johnson",
+    "school": "COAST CAR",
+    "percentiles": {
+      "YPRR": 9,
+      "Threat Rate": 48,
+      "1D/Route": 24,
+      "YAC/Rec": 21,
+      "ADOT": 16,
+      "Contested Catch": 36,
+      "Man YPRR": 64,
+      "Zone YPRR": 7
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Cameron Harpole",
+    "school": "ARIZONA ST",
+    "percentiles": {
+      "YPRR": 3,
+      "Threat Rate": 19,
+      "1D/Route": 2,
+      "YAC/Rec": 8,
+      "ADOT": 20,
+      "Contested Catch": 23,
+      "Man YPRR": 30,
+      "Zone YPRR": 6
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Olsen Patt-Henry",
+    "school": "CLEMSON",
+    "percentiles": {
+      "YPRR": 12,
+      "Threat Rate": 23,
+      "1D/Route": 17,
+      "YAC/Rec": 2,
+      "ADOT": 30,
+      "Contested Catch": 93,
+      "Man YPRR": 33,
+      "Zone YPRR": 13
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Jake Johnson",
+    "school": "N CAROLINA",
+    "percentiles": {
+      "YPRR": 9,
+      "Threat Rate": 20,
+      "1D/Route": 31,
+      "YAC/Rec": 2,
+      "ADOT": 67,
+      "Contested Catch": 78,
+      "Man YPRR": 26,
+      "Zone YPRR": 16
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Lawson Luckie",
+    "school": "GEORGIA",
+    "percentiles": {
+      "YPRR": 12,
+      "Threat Rate": 23,
+      "1D/Route": 54,
+      "YAC/Rec": 3,
+      "ADOT": 86,
+      "Contested Catch": 23,
+      "Man YPRR": 8,
+      "Zone YPRR": 16
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Broc Lane",
+    "school": "UTAH ST",
+    "percentiles": {
+      "YPRR": 30,
+      "Threat Rate": 27,
+      "1D/Route": 7,
+      "YAC/Rec": 0,
+      "ADOT": 97,
+      "Contested Catch": 93,
+      "Man YPRR": 23,
+      "Zone YPRR": 45
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Ryder Kusch",
+    "school": "TEMPLE",
+    "percentiles": {
+      "YPRR": 1,
+      "Threat Rate": 37,
+      "1D/Route": 10,
+      "YAC/Rec": 5,
+      "ADOT": 32,
+      "Contested Catch": 0,
+      "Man YPRR": 22,
+      "Zone YPRR": 2
+    }
+  },
+  {
+    "position": "TE",
+    "name": "Preston Howard",
+    "school": "AUBURN",
+    "percentiles": {
+      "YPRR": 1,
+      "Threat Rate": 5,
+      "1D/Route": 0,
+      "YAC/Rec": 10,
+      "ADOT": 10,
+      "Contested Catch": 11,
+      "Man YPRR": 0,
+      "Zone YPRR": 2
+    }
   }
 ]
