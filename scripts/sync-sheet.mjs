@@ -35,6 +35,7 @@ import { GoogleAuth } from "google-auth-library";
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const OUT_PATH = path.join(ROOT, "data", "generated", "players.json");
 const GRADES_PATH = path.join(ROOT, "data", "grades-source.json");
+const ANALYTICS_PATH = path.join(ROOT, "data", "analytics-source.json");
 
 try {
   process.loadEnvFile(path.join(ROOT, ".env.local"));
@@ -168,6 +169,22 @@ function loadGrades() {
   return map;
 }
 
+function loadAnalytics() {
+  if (!fs.existsSync(ANALYTICS_PATH)) {
+    console.log(`No ${path.relative(ROOT, ANALYTICS_PATH)} yet -- advanced-metric percentiles left blank. Run "npm run publish:analytics" to add them.`);
+    return new Map();
+  }
+  const rows = JSON.parse(fs.readFileSync(ANALYTICS_PATH, "utf-8"));
+  const map = new Map();
+  for (const row of rows) {
+    // Keyed by position too -- QB/RB/WR/TE percentile scales aren't
+    // comparable, and this also protects against a rare cross-position
+    // name collision.
+    map.set(`${row.position}:${normalizeNameForMatch(row.name)}`, row);
+  }
+  return map;
+}
+
 function traitTag(title, body) {
   if (!title) return undefined;
   return { title, body: body || "" };
@@ -280,6 +297,23 @@ async function main() {
   }
   const unmatchedGrades = [...grades.entries()].filter(([key]) => !matchedGradeKeys.has(key)).map(([, g]) => g);
 
+  // Join analytics-source.json (if present) by position + normalized name.
+  // Only QB/RB/WR/TE have this data -- everyone else's dataPercentiles
+  // stays undefined, and the profile panel already omits that section
+  // cleanly when it's missing.
+  const analytics = loadAnalytics();
+  const matchedAnalyticsKeys = new Set();
+  for (const p of allPlayers) {
+    const key = `${p.position}:${normalizeNameForMatch(p.name)}`;
+    const row = analytics.get(key);
+    if (!row) continue;
+    matchedAnalyticsKeys.add(key);
+    p.dataPercentiles = row.percentiles;
+  }
+  const unmatchedAnalytics = [...analytics.entries()]
+    .filter(([key]) => !matchedAnalyticsKeys.has(key))
+    .map(([, a]) => a);
+
   // Overall rank: graded players first (real tier, then grade desc), then
   // ungraded players after, using the old position-order + row-order
   // placeholder to give them *some* stable ordering.
@@ -305,6 +339,10 @@ async function main() {
     console.warn(`\nGraded players not found in the scouting sheet by name (${unmatchedGrades.length}):`);
     for (const g of unmatchedGrades) console.warn(`  - ${g.name} (${g.position})`);
     console.warn("Check for suffix/spelling differences (e.g. \"Jr.\") between the grading workbook and the scouting sheet.\n");
+  }
+  if (analytics.size) {
+    const eligible = allPlayers.filter((p) => ["QB", "RB", "WR", "TE"].includes(p.position)).length;
+    console.log(`Advanced-metric percentiles joined: ${matchedAnalyticsKeys.size} of ${eligible} QB/RB/WR/TE scouting players (${unmatchedAnalytics.length} analytics rows unused -- expected, that dataset covers far more players than are scouted here).`);
   }
   if (ctx.unresolvedSchools.size) {
     console.warn(`\nSchools with no team-colors entry (${ctx.unresolvedSchools.size}):`);
