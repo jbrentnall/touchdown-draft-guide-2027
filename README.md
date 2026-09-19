@@ -4,49 +4,83 @@ Next.js (App Router, TypeScript) site for the interactive Draft Guide. Deploys t
 Netlify. Full profile content is only ever served from the server to an
 entitled request - see "How the paywall seam works" below.
 
-## Status: Phase A
+## Status: Phase B
 
-Board + profile UI + team theming, running against last year's class as dev
-data (see "Where the dev data comes from"). No live Google Sheet yet, no real
-store/auth yet - both come in later phases. The free/gated split (top N
-players open, the rest locked) is wired and working; entitlement is currently
-a placeholder passphrase, not a real purchase.
+Board + profile UI + team theming, now running on live data synced from the
+2027 Google Sheet at build time. No real store/auth yet - that's Phase C. The
+free/gated split (top N players open, the rest locked) is wired and working;
+entitlement is currently a placeholder passphrase, not a real purchase.
 
 ## Running locally
 
 ```bash
 npm install
-cp .env.example .env.local   # then edit PLACEHOLDER_ACCESS_CODE
+cp .env.example .env.local   # then fill in the Google + placeholder-gate values
 npm run dev
 ```
 
 Opens on http://localhost:3000. `npm run dev` and `npm run build` both run
-`scripts/build-dev-data.mjs` first, which regenerates
-`data/generated/players.json` from `draft-guide-prototype.html`'s embedded
-data - you don't need to touch that file by hand.
+`scripts/sync-sheet.mjs` first, which reads the live sheet and regenerates
+`data/generated/players.json` - you don't need to touch that file by hand.
+To work offline against last year's class instead (no Google credentials
+needed), run `npm run sync:fixture` once, then `next dev` directly.
 
 Visit `/unlock` and enter your `PLACEHOLDER_ACCESS_CODE` to simulate being an
 entitled buyer (unlocks every profile in that browser via a cookie). Without
 it, only the top `FREE_PLAYER_LIMIT` players (by overall rank) are open.
 
-## Where the dev data comes from
+## Google Sheets service account setup
 
-Two source files sit at the repo root, both from last year's guide:
+One-time setup, per Google Cloud project:
 
-- `draft-guide-prototype.html` - the reference UI (design/behaviour spec) AND,
-  it turns out, the cleaner data source. Its embedded `DATA` array is what
-  `scripts/build-dev-data.mjs` actually reads.
-- `2026-guide-extracted.json` - kept as your original reference. Not read by
-  the build. It has some PDF-extraction artifacts the prototype's data
-  already cleaned up (raw, non-percentile numbers in what it calls
-  `testingPercentiles`; stray trailing digits on some strengths/weaknesses;
-  an empty `dataPercentiles` on every player). Worth knowing about if you
-  ever go back to it.
+1. Create a project at [console.cloud.google.com](https://console.cloud.google.com) (no billing needed).
+2. **APIs & Services -> Library** -> enable "Google Sheets API".
+3. **APIs & Services -> Credentials -> Create Credentials -> Service account**. No project role needed - access comes from sharing the sheet directly (step 5).
+4. Open the service account -> **Keys** -> **Add Key -> Create new key -> JSON**. Downloads a credential file - treat it like a password.
+5. Copy the service account's email (looks like `name@project-id.iam.gserviceaccount.com`). Share the Google Sheet with it as **Viewer**.
+6. From the downloaded JSON, put `client_email` and `private_key` into `.env.local` as `GOOGLE_SERVICE_ACCOUNT_EMAIL` and `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY` (keep the key's `\n` sequences literal, wrap the whole value in double quotes), plus `GOOGLE_SHEET_ID` from the sheet's URL (`.../spreadsheets/d/<THIS>/edit`).
 
-This whole file (and `scripts/build-dev-data.mjs`) gets replaced in Phase B by
-`scripts/sync-sheet.mjs` reading your live Google Sheet. Nothing else in the
-app changes - both scripts produce the same `data/generated/players.json`
-shape (`lib/types.ts`).
+If a private key is ever pasted somewhere it shouldn't be (chat, a screenshot, a public repo), rotate it: Service Account -> Keys -> delete the old key -> Add Key -> new JSON, then update `.env.local`/Netlify env with the new value. Nothing else depends on a specific key file.
+
+## Where the data comes from
+
+`scripts/sync-sheet.mjs` reads one tab per position (QB, RB, WR, TE, OT, IOL,
+IDL, EDGE, LB, CB, S) from the sheet and writes `data/generated/players.json`
+in the canonical shape (`lib/types.ts`). `scripts/build-dev-data.mjs` is the
+Phase A fallback (last year's class, from `draft-guide-prototype.html`'s
+embedded data) - still there for offline work, not used by default anymore.
+
+**What's mapped:** Player -> name, College -> school, Height/Weight (sheet's
+"6-4" is reformatted to "6'4\""), Pro 1-4 -> strengths, Con 1-4 -> weaknesses,
+"Where he wins"/"What's his role"/"Where he can improve" (+ their text
+columns) -> the three trait tags, Bottom Line -> bottomLine, Status -> the
+publish flag (see below).
+
+**What's deliberately not pulled through yet** (per Jack, 2026-09-19): every
+column to the right of Bottom Line - Games watched, Notes, Round projection,
+Position Rank, Comp, First name/Surname - plus "Former school" and
+"Recruitment (Rivals Industry)" even though they're in scope column-wise.
+None of these have an agreed mapping or UI spot yet. `background`,
+`roundProjection`, `positionRank`, `grade`, and `tier` are all `undefined`
+for every player as a result - partial-profile rendering already handles
+that (those sections just don't render).
+
+**Publish rule:** a player is published if their sheet `Status` is
+`Finalised`, `Summer complete`, or `In season`. `Not started` and
+`Carryover` are not published. Change `PUBLISHABLE_STATUSES` in
+`scripts/sync-sheet.mjs` if that rule changes.
+
+**Overall rank (for the free/gated split) is a placeholder**: position-group
+order (QB, RB, WR, ...), then whatever order rows are in within that
+position's tab. There's no grade/tier or rank data in the sheet yet - once
+there is, swap the sort in `scripts/sync-sheet.mjs`'s `main()` for that
+instead of row order.
+
+**Board grouping:** "Round projection" mode groups everyone into "Not yet
+projected" right now, since none of the current data has a projection - that's
+distinct from "Priority free agents" (an actual UDFA/PFA projection), so
+unranked prospects don't get mislabeled as replacement-level. See
+`lib/constants.ts`'s `roundProjectionToTierNumber`.
 
 ## How the paywall seam works
 
@@ -68,29 +102,31 @@ with a real session + purchase-record check; every caller
 Open `lib/team-colors.ts` and add a row to `TEAM_COLORS`, keyed by the
 school's name in upper case, with `[primaryHex, secondaryHex]`. If a school
 appears in your data under a short or alternate name (e.g. "Cal" for
-"California"), add it to `SCHOOL_ALIASES` instead of duplicating the colour
-row - and update the matching alias table in `scripts/build-dev-data.mjs`
-(Phase B: `scripts/sync-sheet.mjs`) too, since that plain-Node script can't
-import the `.ts` file directly.
+"California", "Pittsburgh" for last year's "PITT"), add it to
+`SCHOOL_ALIASES` instead of duplicating the colour row - and update the
+matching alias table in `scripts/build-dev-data.mjs` and
+`scripts/sync-sheet.mjs` too, since those plain-Node scripts can't import
+the `.ts` file directly.
 
 The sync script warns on stdout about any school it can't resolve to a
-colour entry - watch for that after every sheet sync once Phase B lands.
+colour entry - watch for that after every sheet sync. It resolves
+case-insensitively, so a typo like "MInnesota" vs "Minnesota" won't trip the
+warning (both resolve to the same colour key) but is still worth fixing at
+the source - it's exactly the kind of inconsistency that'll bite you if
+`school` is ever used for exact-match filtering instead of theming.
 
-## Known deviations from the prototype (flagged for Jack, not silently fixed)
+## Known open items (flagged, not guessed at)
 
-- Board rows don't show the one-line "role" trait the prototype showed inline
-  (e.g. "Gunslinger" under a QB's name) - that's scouting content, and the
-  board only ever gets the content-free teaser. Worth a decision: is that
-  one-liner sensitive enough to stay gated, or is it teaser-safe like the
-  tier/round projection already showing?
-- Grouping by "round tier" is really still grouping by round *projection*
-  (the prototype's stand-in) - there's no grade/tier data yet. Phase B swaps
-  this once your grade/tier columns exist.
-- A few trait-tag titles in last year's data are cut short mid-phrase (e.g.
-  "Out of" / "structure You're not getting..." instead of "Out of structure"
-  as the title). That's an upstream PDF-extraction artifact from last year,
-  not something introduced here - not worth fixing for throwaway dev data,
-  but flagging in case it also affects other archived seasons you reuse.
+- **Class year format** ("3Jr", "4Sr" etc.) is shown verbatim - not
+  reformatted, since the leading-digit convention hasn't been confirmed.
+- Everything under "What's deliberately not pulled through yet" above is a
+  standing decision point, not a bug - background, comps, games watched,
+  round projection/position rank, and the recruiting-star/transfer-school
+  columns can all be wired in once there's an agreed shape and UI spot.
+- Last year's dev-fixture data has a couple of upstream PDF-extraction
+  artifacts (trait-tag titles cut short mid-phrase) - not touched, not worth
+  fixing on throwaway comparison data, only relevant if `sync:fixture` is
+  still in use.
 
 ## Environment variables
 

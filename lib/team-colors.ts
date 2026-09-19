@@ -80,6 +80,42 @@ export const TEAM_COLORS: Record<string, [primary: string, secondary: string]> =
   CALIFORNIA: ["#003262", "#FDB515"],
   MARYLAND: ["#E03A3E", "#FFD520"],
   TOLEDO: ["#15397F", "#FFD200"],
+
+  // Added for the 2027 class (schools not in last year's 2026 board):
+  MINNESOTA: ["#7A0019", "#FFCC33"],
+  "OKLAHOMA STATE": ["#FF7300", "#000000"],
+  UCLA: ["#2D68C4", "#F2A900"],
+  "YOUNGSTOWN STATE": ["#CC0000", "#ffffff"],
+  "IDAHO STATE": ["#F1592A", "#000000"],
+  "NORTHERN ARIZONA": ["#003876", "#F1B300"],
+  RUTGERS: ["#CC0033", "#000000"],
+  BYU: ["#002E5D", "#ffffff"],
+  "WEST VIRGINIA": ["#002855", "#EAAA00"],
+  LIBERTY: ["#CC092F", "#002855"],
+  MONTANA: ["#7C2529", "#C0C0C0"],
+  "ILLINOIS STATE": ["#CE0F3D", "#ffffff"],
+  "COLORADO STATE": ["#1E4D2B", "#C8C372"],
+  "NORTH TEXAS": ["#00853E", "#ffffff"],
+  "TEXAS STATE": ["#501214", "#FFC72C"],
+  "WESTERN KENTUCKY": ["#C60C30", "#ffffff"],
+  USF: ["#006747", "#CFC493"],
+  "RHODE ISLAND": ["#002147", "#8FBBDA"],
+  "FRESNO STATE": ["#DB0032", "#003594"],
+  "NORTHERN ILLINOIS": ["#C8102E", "#000000"],
+  TEMPLE: ["#9D2235", "#ffffff"],
+  "VIRGINIA TECH": ["#630031", "#CF4420"],
+  "LOUISIANA TECH": ["#C41230", "#041E42"],
+  "OREGON STATE": ["#DC4405", "#000000"],
+  SYRACUSE: ["#D44500", "#000E54"],
+  "CENTRAL ARKANSAS": ["#4B116F", "#A7A9AC"],
+  "NORTH CAROLINA": ["#7BAFD4", "#ffffff"],
+  MEMPHIS: ["#003087", "#898D8D"],
+  TROY: ["#8B2332", "#A2AAAD"],
+  "NORTH DAKOTA": ["#009A44", "#ffffff"],
+  "NEW MEXICO": ["#BA0C2F", "#A7A8AA"],
+  TULANE: ["#00693E", "#418FDE"],
+  YALE: ["#00356B", "#ffffff"],
+  BUFFALO: ["#005BBB", "#041C2C"],
 };
 
 /**
@@ -92,6 +128,7 @@ export const TEAM_COLORS: Record<string, [primary: string, secondary: string]> =
  */
 export const SCHOOL_ALIASES: Record<string, string> = {
   CAL: "CALIFORNIA",
+  PITTSBURGH: "PITT",
 };
 
 export function resolveSchoolKey(school: string): string {

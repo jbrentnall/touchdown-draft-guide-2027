@@ -72,7 +72,7 @@ function loadTeamColorKeys() {
 
 // Keep in sync with lib/team-colors.ts SCHOOL_ALIASES (duplicated here
 // because this plain-Node script doesn't run through the TS/Next build).
-const SCHOOL_ALIASES = { CAL: "CALIFORNIA" };
+const SCHOOL_ALIASES = { CAL: "CALIFORNIA", PITTSBURGH: "PITT" };
 
 function resolveSchoolKey(school) {
   const key = school.trim().toUpperCase();

@@ -10,7 +10,7 @@ export default async function BoardPage() {
   return (
     <>
       <div className="buildbar">
-        Phase A build - dev data from last year&apos;s class, placeholder access gate.{" "}
+        Phase B build - live from the 2027 sheet, placeholder access gate.{" "}
         {entitled ? "Unlocked in this browser." : <a href="/unlock" style={{ color: "#5b4a1e" }}>Enter access code</a>}
       </div>
       <header className="top">
@@ -19,7 +19,7 @@ export default async function BoardPage() {
             THE <span className="td">TOUCHDOWN</span>
           </span>
           <span className="tagbadge">Draft Guide</span>
-          <span className="yr">2026 class &middot; {teasers.length} prospects</span>
+          <span className="yr">2027 class &middot; {teasers.length} prospects</span>
         </div>
       </header>
 
