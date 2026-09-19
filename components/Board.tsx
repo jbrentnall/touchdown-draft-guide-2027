@@ -2,22 +2,25 @@
 
 import { useMemo, useState } from "react";
 import type { BoardTeaser, Position } from "@/lib/types";
-import { POSITIONS, POSITION_NAMES, ROUND_TIER_ORDER, roundTierName, roundProjectionToTierNumber } from "@/lib/constants";
+import { POSITIONS, POSITION_NAMES, tierGroupKey, tierGroupName } from "@/lib/constants";
 import { getTeamTheme } from "@/lib/team-colors";
 import { isPlayerAccessible } from "@/lib/entitlement-shared";
 import ProfilePanel from "./ProfilePanel";
 
-type GroupBy = "position" | "round";
+type GroupBy = "position" | "tier";
 
+/** roundGrade (free text from the grading workbook, e.g. "Top 5") takes
+ * precedence; roundProjection is only there for the last-year dev fixture. */
 function projClass(rp: string | undefined): string {
   if (rp === "1st") return "r1";
   if (rp === "2nd") return "r2";
   if (rp === "UDFA" || rp === "PFA") return "udfa";
   return "";
 }
-function projText(rp: string | undefined): string {
-  if (rp === "UDFA" || rp === "PFA") return rp;
-  return `Rd ${rp ?? "-"}`;
+function projText(p: BoardTeaser): string {
+  if (p.roundGrade) return p.roundGrade;
+  if (p.roundProjection === "UDFA" || p.roundProjection === "PFA") return p.roundProjection;
+  return `Rd ${p.roundProjection ?? "-"}`;
 }
 
 export default function Board({
@@ -55,13 +58,14 @@ export default function Board({
         ])
         .filter((g) => g[2].length);
     }
-    return ROUND_TIER_ORDER.map((k): [number, string, BoardTeaser[]] => [
+    const keys = [...new Set(rows.map((r) => tierGroupKey(r.tierNumber)))].sort((a, b) => a - b);
+    return keys.map((k): [number, string, BoardTeaser[]] => [
       k,
-      roundTierName(k),
+      tierGroupName(k),
       rows
-        .filter((r) => roundProjectionToTierNumber(r.roundProjection) === k)
-        .sort((a, b) => posRankNum(a) - posRankNum(b) || a.name.localeCompare(b.name)),
-    ]).filter((g) => g[2].length);
+        .filter((r) => tierGroupKey(r.tierNumber) === k)
+        .sort((a, b) => (a.overallRank ?? 999) - (b.overallRank ?? 999) || a.name.localeCompare(b.name)),
+    ]);
   }, [rows, groupBy, curPos]);
 
   return (
@@ -85,8 +89,8 @@ export default function Board({
             <button className={groupBy === "position" ? "on" : ""} onClick={() => setGroupBy("position")}>
               Position
             </button>
-            <button className={groupBy === "round" ? "on" : ""} onClick={() => setGroupBy("round")}>
-              Round projection
+            <button className={groupBy === "tier" ? "on" : ""} onClick={() => setGroupBy("tier")}>
+              Tier
             </button>
           </div>
           <div className="seg">
@@ -197,7 +201,7 @@ function Row({
       </div>
       <div className="role-tag" />
       <div className="proj">
-        <span className={"pill " + projClass(p.roundProjection)}>{projText(p.roundProjection)}</span>
+        <span className={"pill " + (p.roundGrade ? "" : projClass(p.roundProjection))}>{projText(p)}</span>
       </div>
     </div>
   );

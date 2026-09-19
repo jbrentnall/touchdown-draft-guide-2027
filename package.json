@@ -9,7 +9,8 @@
     "lint": "next lint",
     "sync:fixture": "node scripts/build-dev-data.mjs",
     "sync:sheet": "node scripts/sync-sheet.mjs",
-    "export:grades": "node scripts/export-grades.mjs"
+    "export:grades": "node scripts/export-grades.mjs",
+    "publish:grades": "node scripts/publish-grades.mjs"
   },
   "dependencies": {
     "google-auth-library": "^11.1.0",

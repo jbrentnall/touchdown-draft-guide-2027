@@ -43,6 +43,17 @@ export function roundTierName(k: number): string {
  * projected as a priority free agent, and grouping them together would
  * misrepresent every unranked prospect as UDFA-caliber.
  */
+/** Sentinel grouping key for players with no grading-tier data yet. */
+export const UNGRADED_TIER = 999;
+
+export function tierGroupKey(tierNumber: number | undefined): number {
+  return typeof tierNumber === "number" && Number.isFinite(tierNumber) ? tierNumber : UNGRADED_TIER;
+}
+
+export function tierGroupName(tierNumber: number): string {
+  return tierNumber === UNGRADED_TIER ? "Ungraded" : `Tier ${tierNumber}`;
+}
+
 export function roundProjectionToTierNumber(roundProjection: string | undefined): number {
   if (!roundProjection) return 9;
   if (roundProjection === "UDFA" || roundProjection === "PFA") return 8;

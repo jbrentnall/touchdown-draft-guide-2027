@@ -39,19 +39,27 @@ export interface Player {
   classYear?: string;
 
   positionRank?: string;
-  /** '1'..'7', 'UDFA', or 'PFA'. */
+  /** '1'..'7', 'UDFA', or 'PFA'. Unused now that grading is joined in --
+   * kept for the last-year dev-fixture path (build-dev-data.mjs). */
   roundProjection?: string;
+  /** Free-text round grade from the grading workbook (e.g. "Top 5",
+   * "Late 1st-Early 2nd"). Takes precedence over roundProjection when
+   * present. Not a strict enum -- Jack's own wording, shown verbatim. */
+  roundGrade?: string;
 
-  /** Numeric evaluation grade, source of truth for tier (Phase B). */
+  /** Numeric evaluation grade from the grading workbook (0-10ish scale). */
   grade?: number;
-  /** Tier label the grade maps to (e.g. "Tier 1"). */
+  /** Numeric tier from the grading workbook. Source of truth for the
+   * "Group by tier" board mode. */
+  tierNumber?: number;
+  /** Display label for tierNumber (e.g. "Tier 1"). */
   tier?: string;
   /**
-   * Cross-position big-board rank used for the free/gated split.
-   * Phase A: derived heuristically from position order + positionRank
-   * (see scripts/build-dev-data.mjs) as a placeholder -- there is no
-   * overall-rank source in last year's data. Phase B should source this
-   * from grade/tier once real data is wired in.
+   * Cross-position big-board rank used for the free/gated split and
+   * default board ordering. Graded players are ranked by tier then grade
+   * (real data, scripts/sync-sheet.mjs); ungraded players fall back to a
+   * position-order + sheet-row-order placeholder, appended after everyone
+   * graded.
    */
   overallRank?: number;
 
@@ -92,6 +100,8 @@ export interface BoardTeaser {
   classYear?: string;
   positionRank?: string;
   roundProjection?: string;
+  roundGrade?: string;
+  tierNumber?: number;
   tier?: string;
   overallRank: number;
 }
@@ -105,6 +115,8 @@ export function toBoardTeaser(p: Player): BoardTeaser {
     classYear: p.classYear,
     positionRank: p.positionRank,
     roundProjection: p.roundProjection,
+    roundGrade: p.roundGrade,
+    tierNumber: p.tierNumber,
     tier: p.tier,
     overallRank: p.overallRank ?? Number.MAX_SAFE_INTEGER,
   };

@@ -12,9 +12,10 @@ function projClass(rp: string | undefined): string {
   if (rp === "UDFA" || rp === "PFA") return "udfa";
   return "";
 }
-function projText(rp: string | undefined): string {
-  if (rp === "UDFA" || rp === "PFA") return rp;
-  return `Rd ${rp ?? "-"}`;
+function projText(p: Player): string {
+  if (p.roundGrade) return p.roundGrade;
+  if (p.roundProjection === "UDFA" || p.roundProjection === "PFA") return p.roundProjection;
+  return `Rd ${p.roundProjection ?? "-"}`;
 }
 
 export default function ProfilePanel({
@@ -81,8 +82,8 @@ export default function ProfilePanel({
                   {player.position}
                   {player.positionRank ?? ""}
                 </span>
-                <span className={"pill " + projClass(player.roundProjection)}>
-                  {projText(player.roundProjection)}
+                <span className={"pill " + (player.roundGrade ? "" : projClass(player.roundProjection))}>
+                  {projText(player)}
                 </span>
               </div>
               <div className="p-name">{player.name}</div>
@@ -94,8 +95,18 @@ export default function ProfilePanel({
                   Position rank<b className="gold">{player.positionRank ?? "-"}</b>
                 </div>
                 <div className="ps">
-                  Round proj.<b>{projText(player.roundProjection)}</b>
+                  {player.roundGrade ? "Round grade" : "Round proj."}<b>{projText(player)}</b>
                 </div>
+                {player.tier ? (
+                  <div className="ps">
+                    Tier<b>{player.tier}</b>
+                  </div>
+                ) : null}
+                {player.grade !== undefined ? (
+                  <div className="ps">
+                    Grade<b>{player.grade}</b>
+                  </div>
+                ) : null}
                 <div className="ps">
                   Height<b>{player.height ?? "-"}</b>
                 </div>

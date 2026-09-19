@@ -20,11 +20,12 @@
  * "Finalised", "Summer complete", or "In season". "Not started" and
  * "Carryover" are not published.
  *
- * There is no rank/grade/tier data in the sheet yet, so `overallRank` is a
- * placeholder: position-group order, then row order within that tab (i.e.
- * "however Jack currently has the tab sorted"). Same caveat as Phase A's
- * dev-data placeholder -- swap this for a real source once grade/tier
- * exist.
+ * Grade/tier/rank come from a second, separate source: data/grades-source.json,
+ * produced by scripts/publish-grades.mjs from Jack's grading workbook (which
+ * lives on his laptop, not in this repo). If that file is present, its rows
+ * are joined onto the scouting players by name. Players with no grade yet
+ * fall back to the old placeholder overallRank (position-group order, then
+ * sheet row order) and are ranked after every graded player.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -33,6 +34,7 @@ import { GoogleAuth } from "google-auth-library";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const OUT_PATH = path.join(ROOT, "data", "generated", "players.json");
+const GRADES_PATH = path.join(ROOT, "data", "grades-source.json");
 
 try {
   process.loadEnvFile(path.join(ROOT, ".env.local"));
@@ -115,6 +117,42 @@ function headerIndex(headers) {
 function cell(row, idx) {
   if (idx === undefined) return "";
   return (row[idx] ?? "").toString().trim();
+}
+
+// For joining grades-source.json to scouting players by name. Strips
+// suffixes/punctuation that differ between the grading workbook and the
+// scouting sheet (e.g. "Mark Fletcher Jr." vs "Mark Fletcher", "T.J. Moore"
+// vs "TJ Moore") -- deliberately NOT a fuzzy/typo-tolerant match, since
+// silently merging two different real players would be worse than an
+// unmatched warning.
+function normalizeNameForMatch(name) {
+  return name
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[.']/g, "")
+    .replace(/\b(jr|sr|ii|iii|iv)\b\.?/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function ordinal(n) {
+  const s = ["th", "st", "nd", "rd"];
+  const v = n % 100;
+  return n + (s[(v - 20) % 10] ?? s[v] ?? s[0]);
+}
+
+function loadGrades() {
+  if (!fs.existsSync(GRADES_PATH)) {
+    console.log(`No ${path.relative(ROOT, GRADES_PATH)} yet -- grades/ranks left blank. Run "npm run publish:grades" to add them.`);
+    return new Map();
+  }
+  const rows = JSON.parse(fs.readFileSync(GRADES_PATH, "utf-8"));
+  const map = new Map();
+  for (const row of rows) {
+    map.set(normalizeNameForMatch(row.name), row);
+  }
+  return map;
 }
 
 function traitTag(title, body) {
@@ -213,9 +251,30 @@ async function main() {
     allPlayers = allPlayers.concat(players);
   });
 
-  // Placeholder overall rank: position-group order, then sheet row order.
+  // Join grades-source.json (if present) by normalized name.
+  const grades = loadGrades();
+  const matchedGradeKeys = new Set();
+  for (const p of allPlayers) {
+    const grade = grades.get(normalizeNameForMatch(p.name));
+    if (!grade) continue;
+    matchedGradeKeys.add(normalizeNameForMatch(p.name));
+    p.grade = grade.grade;
+    p.tierNumber = grade.tierNumber;
+    p.tier = grade.tierNumber !== undefined ? `Tier ${grade.tierNumber}` : undefined;
+    p.positionRank = grade.positionRankNumber !== undefined ? ordinal(grade.positionRankNumber) : p.positionRank;
+    p.roundGrade = grade.roundGrade;
+  }
+  const unmatchedGrades = [...grades.entries()].filter(([key]) => !matchedGradeKeys.has(key)).map(([, g]) => g);
+
+  // Overall rank: graded players first (real tier, then grade desc), then
+  // ungraded players after, using the old position-order + row-order
+  // placeholder to give them *some* stable ordering.
   const posOrder = Object.fromEntries(POSITION_TABS.map((p, i) => [p, i]));
-  allPlayers.sort((a, b) => posOrder[a.position] - posOrder[b.position] || a._rowOrder - b._rowOrder);
+  const graded = allPlayers.filter((p) => p.tierNumber !== undefined);
+  const ungraded = allPlayers.filter((p) => p.tierNumber === undefined);
+  graded.sort((a, b) => a.tierNumber - b.tierNumber || (b.grade ?? 0) - (a.grade ?? 0));
+  ungraded.sort((a, b) => posOrder[a.position] - posOrder[b.position] || a._rowOrder - b._rowOrder);
+  allPlayers = [...graded, ...ungraded];
   allPlayers.forEach((p, i) => {
     p.overallRank = i + 1;
     delete p._rowOrder;
@@ -225,6 +284,14 @@ async function main() {
   fs.writeFileSync(OUT_PATH, JSON.stringify(allPlayers, null, 2));
 
   console.log(`\nWrote ${allPlayers.length} players (${allPlayers.filter((p) => p.publish).length} published) to ${path.relative(ROOT, OUT_PATH)}`);
+  if (grades.size) {
+    console.log(`Grades joined: ${matchedGradeKeys.size} of ${grades.size}`);
+  }
+  if (unmatchedGrades.length) {
+    console.warn(`\nGraded players not found in the scouting sheet by name (${unmatchedGrades.length}):`);
+    for (const g of unmatchedGrades) console.warn(`  - ${g.name} (${g.position})`);
+    console.warn("Check for suffix/spelling differences (e.g. \"Jr.\") between the grading workbook and the scouting sheet.\n");
+  }
   if (ctx.unresolvedSchools.size) {
     console.warn(`\nSchools with no team-colors entry (${ctx.unresolvedSchools.size}):`);
     for (const s of ctx.unresolvedSchools) console.warn(`  - ${s}`);
