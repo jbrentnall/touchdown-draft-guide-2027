@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "sync:fixture": "node scripts/build-dev-data.mjs",
-    "sync:sheet": "node scripts/sync-sheet.mjs"
+    "sync:sheet": "node scripts/sync-sheet.mjs",
+    "export:grades": "node scripts/export-grades.mjs"
   },
   "dependencies": {
     "google-auth-library": "^11.1.0",
@@ -23,6 +24,7 @@
     "@types/react-dom": "^19.2.7",
     "eslint": "^10.9.1",
     "eslint-config-next": "^16.3.4",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
   }
 }
