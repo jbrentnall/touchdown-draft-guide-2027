@@ -3,6 +3,11 @@
   --gold:#C9A24B; --gold-soft:#E8D9AE; --line:#E4DFD4; --mut:#6C7480;
   --grn:#1F7A54; --red:#A5442E; --track:#ECE7DC;
   --shadow:0 1px 0 rgba(4,30,66,.04),0 8px 30px -18px rgba(4,30,66,.35);
+
+  /* Main-page chrome only (header, controls, chips, board dividers) --
+     distinct from --navy/--gold, which stay the Touchdown brand colours
+     used on player rows and the profile panel. */
+  --page-ink:#1d2228; --page-accent:#ffcc00; --page-accent-soft:#FFF3B0;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
@@ -11,13 +16,13 @@ body{background:var(--paper);color:var(--ink);
   -webkit-font-smoothing:antialiased;line-height:1.5}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 
-.buildbar{background:var(--gold-soft);color:#5b4a1e;font-size:12.5px;text-align:center;padding:7px 12px;font-weight:600}
-header.top{background:var(--navy);color:#fff}
+.buildbar{background:var(--page-accent-soft);color:var(--page-ink);font-size:12.5px;text-align:center;padding:7px 12px;font-weight:600}
+header.top{background:var(--page-ink);color:#fff}
 .top .wrap{display:flex;align-items:baseline;gap:16px;padding:16px 20px;flex-wrap:wrap}
 .brand{font-weight:800;letter-spacing:.02em;font-size:19px}
-.brand .td{color:var(--gold)}
+.brand .td{color:var(--page-accent)}
 .tagbadge{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--navy);background:var(--gold);padding:3px 8px;border-radius:3px}
+  color:var(--page-ink);background:var(--page-accent);padding:3px 8px;border-radius:3px}
 .yr{margin-left:auto;font-size:13px;color:#B9C3D4}
 
 .board-head{padding:32px 0 14px}
@@ -36,7 +41,7 @@ h1{font-size:30px;margin:.28em 0 .1em;letter-spacing:-.01em}
 
 .seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card)}
 .seg button{border:0;background:transparent;padding:9px 13px;font-size:13px;font-weight:600;color:var(--mut);cursor:pointer}
-.seg button.on{background:var(--navy);color:#fff}
+.seg button.on{background:var(--page-ink);color:#fff}
 .seg .lbl{font-size:11px;color:var(--mut);align-self:center;padding:0 10px 0 4px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
 
 .count{font-size:12.5px;color:var(--mut);margin-left:auto;white-space:nowrap}
@@ -45,7 +50,7 @@ h1{font-size:30px;margin:.28em 0 .1em;letter-spacing:-.01em}
 .chip{font-size:12.5px;font-weight:600;padding:6px 11px;border-radius:20px;border:1px solid var(--line);
   background:var(--card);color:var(--mut);cursor:pointer;transition:.12s}
 .chip:hover{border-color:var(--gold)}
-.chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.chip.on{background:var(--page-ink);color:#fff;border-color:var(--page-ink)}
 .chip:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 
 .board{padding:10px 0 70px}
@@ -105,6 +110,7 @@ body.team .row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:
 .h-lbl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:9px}
 .trait{display:grid;grid-template-columns:132px 1fr;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
 .trait:last-child{border-bottom:1px solid var(--line)}
+.trait .tlabel{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut);font-weight:600;margin-bottom:2px}
 .trait .tt{font-weight:700;color:var(--navy);font-size:14px}
 .trait .tb{font-size:14px;color:#333}
 .sw{display:grid;grid-template-columns:1fr 1fr;gap:20px}

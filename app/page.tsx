@@ -11,7 +11,7 @@ export default async function BoardPage() {
     <>
       <div className="buildbar">
         Phase B build - live from the 2027 sheet, placeholder access gate.{" "}
-        {entitled ? "Unlocked in this browser." : <a href="/unlock" style={{ color: "#5b4a1e" }}>Enter access code</a>}
+        {entitled ? "Unlocked in this browser." : <a href="/unlock" style={{ color: "var(--navy)" }}>Enter access code</a>}
       </div>
       <header className="top">
         <div className="wrap">

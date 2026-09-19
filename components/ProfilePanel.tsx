@@ -105,15 +105,6 @@ export default function ProfilePanel({
               </div>
             </div>
             <div className="p-body">
-              {player.winsWith || player.archetype || player.improve ? (
-                <section>
-                  <div className="h-lbl">Scouting summary</div>
-                  <Trait tag={player.winsWith} />
-                  <Trait tag={player.archetype} />
-                  <Trait tag={player.improve} />
-                </section>
-              ) : null}
-
               {player.strengths.length || player.weaknesses.length ? (
                 <section className="sw">
                   {player.strengths.length ? (
@@ -128,7 +119,7 @@ export default function ProfilePanel({
                   ) : null}
                   {player.weaknesses.length ? (
                     <div>
-                      <div className="lab neg">Areas to improve</div>
+                      <div className="lab neg">Weaknesses</div>
                       <ul>
                         {player.weaknesses.map((s, i) => (
                           <li key={i}>{s}</li>
@@ -136,6 +127,15 @@ export default function ProfilePanel({
                       </ul>
                     </div>
                   ) : null}
+                </section>
+              ) : null}
+
+              {player.winsWith || player.archetype || player.improve ? (
+                <section>
+                  <div className="h-lbl">Scouting summary</div>
+                  <Trait label="Where he wins" tag={player.winsWith} />
+                  <Trait label="What's his role" tag={player.archetype} />
+                  <Trait label="Where he can improve" tag={player.improve} />
                 </section>
               ) : null}
 
@@ -179,11 +179,14 @@ export default function ProfilePanel({
   );
 }
 
-function Trait({ tag }: { tag?: { title: string; body: string } }) {
+function Trait({ label, tag }: { label: string; tag?: { title: string; body: string } }) {
   if (!tag || !tag.title) return null;
   return (
     <div className="trait">
-      <div className="tt">{tag.title}</div>
+      <div>
+        <div className="tlabel">{label}</div>
+        <div className="tt">{tag.title}</div>
+      </div>
       <div className="tb">{tag.body}</div>
     </div>
   );
