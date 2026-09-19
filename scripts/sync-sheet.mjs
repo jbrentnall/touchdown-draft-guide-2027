@@ -136,10 +136,23 @@ function normalizeNameForMatch(name) {
     .trim();
 }
 
-function ordinal(n) {
-  const s = ["th", "st", "nd", "rd"];
-  const v = n % 100;
-  return n + (s[(v - 20) % 10] ?? s[v] ?? s[0]);
+// Keep in sync with lib/constants.ts TIER_NAMES (duplicated here because
+// this plain-Node script doesn't run through the TS/Next build).
+const TIER_NAMES = {
+  1: "Blue chip talent",
+  2: "High-end starter",
+  3: "Good starter",
+  4: "Functional starter",
+  5: "Rotational contributor/role player",
+  6: "Depth",
+  7: "Roster fringe",
+};
+// Tier 5 reads as "Backup" specifically for QB/OT/IOL (per Jack).
+const BACKUP_POSITIONS = new Set(["QB", "OT", "IOL"]);
+
+function tierName(tierNumber, position) {
+  if (tierNumber === 5 && BACKUP_POSITIONS.has(position)) return "Backup";
+  return TIER_NAMES[tierNumber] ?? `Tier ${tierNumber}`;
 }
 
 function loadGrades() {
@@ -260,8 +273,9 @@ async function main() {
     matchedGradeKeys.add(normalizeNameForMatch(p.name));
     p.grade = grade.grade;
     p.tierNumber = grade.tierNumber;
-    p.tier = grade.tierNumber !== undefined ? `Tier ${grade.tierNumber}` : undefined;
-    p.positionRank = grade.positionRankNumber !== undefined ? ordinal(grade.positionRankNumber) : p.positionRank;
+    p.tier = grade.tierNumber !== undefined ? tierName(grade.tierNumber, p.position) : undefined;
+    p.positionRank =
+      grade.positionRankNumber !== undefined ? String(grade.positionRankNumber) : p.positionRank;
     p.roundGrade = grade.roundGrade;
   }
   const unmatchedGrades = [...grades.entries()].filter(([key]) => !matchedGradeKeys.has(key)).map(([, g]) => g);

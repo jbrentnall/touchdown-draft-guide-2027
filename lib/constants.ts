@@ -37,12 +37,24 @@ export function roundTierName(k: number): string {
 }
 
 /**
- * 9 ("not yet projected") is distinct from 8 (an actual UDFA/PFA
- * projection) -- a player with no roundProjection at all (true for
- * everyone in the 2027 sheet so far) is not the same as one Jack has
- * projected as a priority free agent, and grouping them together would
- * misrepresent every unranked prospect as UDFA-caliber.
+ * Keep in sync with scripts/sync-sheet.mjs TIER_NAMES (duplicated there
+ * because that plain-Node script doesn't run through the TS/Next build).
+ * This is the generic (position-independent) name for each tier, used for
+ * the board's "Group by tier" section headers, which span every position.
+ * A single player's own tier label (lib/types.ts Player.tier) may differ
+ * for tier 5 -- QB/OT/IOL show "Backup" there instead -- since that's
+ * unambiguous for one player but not for a header spanning many.
  */
+export const TIER_NAMES: Record<number, string> = {
+  1: "Blue chip talent",
+  2: "High-end starter",
+  3: "Good starter",
+  4: "Functional starter",
+  5: "Rotational contributor/role player",
+  6: "Depth",
+  7: "Roster fringe",
+};
+
 /** Sentinel grouping key for players with no grading-tier data yet. */
 export const UNGRADED_TIER = 999;
 
@@ -51,9 +63,17 @@ export function tierGroupKey(tierNumber: number | undefined): number {
 }
 
 export function tierGroupName(tierNumber: number): string {
-  return tierNumber === UNGRADED_TIER ? "Ungraded" : `Tier ${tierNumber}`;
+  if (tierNumber === UNGRADED_TIER) return "Ungraded";
+  return TIER_NAMES[tierNumber] ?? `Tier ${tierNumber}`;
 }
 
+/**
+ * 9 ("not yet projected") is distinct from 8 (an actual UDFA/PFA
+ * projection) -- a player with no roundProjection at all (true for
+ * everyone in the 2027 sheet so far) is not the same as one Jack has
+ * projected as a priority free agent, and grouping them together would
+ * misrepresent every unranked prospect as UDFA-caliber.
+ */
 export function roundProjectionToTierNumber(roundProjection: string | undefined): number {
   if (!roundProjection) return 9;
   if (roundProjection === "UDFA" || roundProjection === "PFA") return 8;
