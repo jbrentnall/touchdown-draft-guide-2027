@@ -18,13 +18,12 @@ export default async function BoardPage() {
           <span className="brand">
             THE <span className="td">TOUCHDOWN</span>
           </span>
-          <span className="tagbadge">Draft Guide</span>
+          <span className="tagbadge">2027 NFL Draft Guide</span>
           <span className="yr">2027 class &middot; {teasers.length} prospects</span>
         </div>
       </header>
 
       <div className="wrap board-head">
-        <div className="kicker">Scouting-led. Film-first.</div>
         <h1>The Big Board</h1>
         <p className="sub">
           Every prospect in the guide, grouped by position and ranked within it. Search by
