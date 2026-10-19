@@ -97,6 +97,9 @@ body.team .row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:
 .p-close{position:absolute;top:16px;right:18px;background:rgba(255,255,255,.12);border:0;color:#fff;
   width:32px;height:32px;border-radius:50%;font-size:17px;cursor:pointer;line-height:1}
 .p-close:hover{background:rgba(255,255,255,.24)}
+.p-top{display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.p-top>div{min-width:0}
+.p-headshot{height:88px;width:auto;margin-top:28px;flex-shrink:0;object-fit:contain}
 .p-rankline{display:flex;align-items:center;gap:10px;margin-bottom:6px}
 .p-rankbadge{font-size:12px;font-weight:800;color:var(--phead,var(--navy));background:var(--ptext,var(--gold));padding:3px 9px;border-radius:4px;letter-spacing:.02em}
 .p-name{font-size:26px;font-weight:800;letter-spacing:-.01em;margin:0 0 3px}

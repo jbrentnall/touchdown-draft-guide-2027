@@ -36,6 +36,8 @@ const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const OUT_PATH = path.join(ROOT, "data", "generated", "players.json");
 const GRADES_PATH = path.join(ROOT, "data", "grades-source.json");
 const ANALYTICS_PATH = path.join(ROOT, "data", "analytics-source.json");
+const HEADSHOTS_MANIFEST_PATH = path.join(ROOT, "data", "headshots-manifest.json");
+const HEADSHOTS_DIR = path.join(ROOT, "public", "headshots");
 
 try {
   process.loadEnvFile(path.join(ROOT, ".env.local"));
@@ -313,6 +315,21 @@ async function main() {
   const unmatchedAnalytics = [...analytics.entries()]
     .filter(([key]) => !matchedAnalyticsKeys.has(key))
     .map(([, a]) => a);
+
+  // Headshots: data/headshots-manifest.json is written by
+  // scripts/fetch-headshots.mjs (run locally, results committed). A player
+  // only gets a headshot path if the file is actually on disk.
+  let headshotCount = 0;
+  if (fs.existsSync(HEADSHOTS_MANIFEST_PATH)) {
+    const manifest = JSON.parse(fs.readFileSync(HEADSHOTS_MANIFEST_PATH, "utf-8"));
+    for (const p of allPlayers) {
+      const entry = manifest[p.id];
+      if (entry && fs.existsSync(path.join(HEADSHOTS_DIR, entry.file))) {
+        p.headshot = `/headshots/${entry.file}`;
+        headshotCount++;
+      }
+    }
+  }
 
   // Overall rank: graded players first (real tier, then grade desc), then
   // ungraded players after, using the old position-order + row-order

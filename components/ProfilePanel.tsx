@@ -77,18 +77,32 @@ export default function ProfilePanel({
               <button className="p-close" aria-label="Close" onClick={onClose}>
                 &times;
               </button>
-              <div className="p-rankline">
-                <span className="p-rankbadge">
-                  {player.position}
-                  {player.positionRank ?? ""}
-                </span>
-                <span className={"pill " + (player.roundGrade ? "" : projClass(player.roundProjection))}>
-                  {projText(player)}
-                </span>
-              </div>
-              <div className="p-name">{player.name}</div>
-              <div className="p-sub">
-                {player.position}, {player.school} &middot; {player.classYear ?? ""}
+              <div className="p-top">
+                <div>
+                  <div className="p-rankline">
+                    <span className="p-rankbadge">
+                      {player.position}
+                      {player.positionRank ?? ""}
+                    </span>
+                    <span className={"pill " + (player.roundGrade ? "" : projClass(player.roundProjection))}>
+                      {projText(player)}
+                    </span>
+                  </div>
+                  <div className="p-name">{player.name}</div>
+                  <div className="p-sub">
+                    {player.position}, {player.school} &middot; {player.classYear ?? ""}
+                  </div>
+                </div>
+                {player.headshot ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    className="p-headshot"
+                    src={player.headshot}
+                    alt={player.name}
+                    loading="lazy"
+                    onError={(e) => (e.currentTarget.style.display = "none")}
+                  />
+                ) : null}
               </div>
               <div className="p-stats-strip">
                 <div className="ps">

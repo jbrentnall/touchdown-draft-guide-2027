@@ -84,6 +84,12 @@ export interface Player {
 
   background?: string;
   bottomLine?: string;
+
+  /** Path to a locally saved headshot (public/headshots/...), set by
+   * scripts/sync-sheet.mjs when scripts/fetch-headshots.mjs found one.
+   * Profile panel only -- deliberately not on BoardTeaser, so the board
+   * doesn't download a photo for every row. */
+  headshot?: string;
 }
 
 /**

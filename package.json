@@ -11,7 +11,8 @@
     "sync:sheet": "node scripts/sync-sheet.mjs",
     "export:grades": "node scripts/export-grades.mjs",
     "publish:grades": "node scripts/publish-grades.mjs",
-    "publish:analytics": "node scripts/publish-analytics.mjs"
+    "publish:analytics": "node scripts/publish-analytics.mjs",
+    "fetch:headshots": "node scripts/fetch-headshots.mjs"
   },
   "dependencies": {
     "google-auth-library": "^11.1.0",
