@@ -638,5 +638,33 @@
   "princewill-umanmielen": {
     "espnId": "4917971",
     "file": "princewill-umanmielen.png"
+  },
+  "a-mauri-washington": {
+    "espnId": "4899488",
+    "file": "a-mauri-washington.png"
+  },
+  "tae-johnson": {
+    "espnId": "5218506",
+    "file": "tae-johnson.png"
+  },
+  "koi-perich": {
+    "espnId": "5142588",
+    "file": "koi-perich.png"
+  },
+  "brendan-sorsby": {
+    "espnId": "4899046",
+    "file": "brendan-sorsby.png"
+  },
+  "oj-frederique": {
+    "espnId": "5226976",
+    "file": "oj-frederique.png"
+  },
+  "lee-beebe-jr": {
+    "espnId": "5091725",
+    "file": "lee-beebe-jr.png"
+  },
+  "anthonie-knapp": {
+    "espnId": "5139001",
+    "file": "anthonie-knapp.png"
   }
 }
